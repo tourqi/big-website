@@ -1,0 +1,25 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply font-sans text-gray-900; }   /* Inter untuk body */
+  h1,h2,h3 { @apply font-display; }          /* Plus Jakarta untuk heading */
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px);} to {opacity:1; transform:none;} }
+@media (prefers-reduced-motion: reduce) {
+  .transition-all,
+  .transition-opacity {
+    transition: none !important;
+  }
+}
+
+
+html, body, #root { height: 100%; }
+
+svg { display: block; }
