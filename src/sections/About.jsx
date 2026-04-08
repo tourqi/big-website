@@ -3,8 +3,8 @@ import React from "react";
 
 export default function About() {
   const stats = [
-    { value: "100+", label: "Proyek interior terselesaikan" },
-    { value: "20+", label: "Partner & vendor terpercaya" },
+    { value: "20+", label: "Proyek interior terselesaikan" },
+    { value: "5+", label: "Partner & vendor terpercaya" },
     { value: "99%", label: "Klien puas dengan hasil kami" },
   ];
 
@@ -45,7 +45,7 @@ export default function About() {
           <div>
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
-                src="https://us.images.westend61.de/0000636918pw/interior-of-a-carpenters-workshop-JUBF000017.jpg"
+                src="portfolio/team.jpg"
                 alt="Interior project"
                 className="w-full h-[420px] object-cover"
                 loading="lazy"

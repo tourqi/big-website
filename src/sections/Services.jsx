@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/Card.jsx"; // ganti ke "../co
 import {
   Wrench,
   Hammer,
-  UtensilsCrossed,
+  Drill,
   Home,
   Building2,
   Coffee,
@@ -13,7 +13,7 @@ import {
 const SERVICES = [
   {
     id: "custom-furniture",
-    icon: UtensilsCrossed,
+    icon: Drill,
     title: "Custom Furniture",
     desc:
       "Furnitur custom sesuai kebutuhan ruang & gaya hidup—material berkualitas, pengerjaan detail.",
@@ -47,7 +47,7 @@ const SERVICES = [
       { label: "Kantor", icon: Building2 },
       { label: "Kafe/Bisnis", icon: Coffee },
     ],
-    cta: { label: "Ajukan Penawaran", href: "/#contact" },
+    cta: { label: "Lihat Portofolio", href: "/#portfolio" },
   },
   {
     id: "construction",
@@ -66,7 +66,7 @@ const SERVICES = [
       { label: "Kantor", icon: Building2 },
       { label: "Kafe/Bisnis", icon: Coffee },
     ],
-    cta: { label: "Konsultasi Gratis", href: "/#contact" },
+    cta: { label: "Lihat Portofolio", href: "/#portfolio" },
   },
 ];
 

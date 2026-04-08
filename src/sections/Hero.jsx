@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 export default function HeroSplit({
   titleLines = ["Wujudkan", "Ruang Nyaman", "& Estetis Mulai", "Rp 1,6 Juta / m²"],
   subtitle = "Interior custom yang mencerminkan gaya hidup Anda — bukan template katalog. Material terkurasi, pengerjaan rapi, timeline jelas.",
-  image = "https://images.unsplash.com/photo-1502005097973-6a7082348e28?q=80&w=774&auto=format&fit=crop", // pakai aset lokal kalau ada
+  image = "https://images.unsplash.com/photo-1634822929277-0c51ca0e8846?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // pakai aset lokal kalau ada
   ctaPrimary = { label: "Lihat Hasil Karya Kami", to: "/#portfolio" },
   ctaSecondary = { label: "Mulai Konsultasi Gratis", to: "/#contact" },
   highlight = {
-    title: "Free Cooker Hood",
+    title: "Work From Home Package",
     price: "Start From Rp 1,6 Juta",
-    desc: "Dapatkan hadiah menarik untuk pembuatan Kitchen Set (syarat & ketentuan berlaku)",
-    thumb: "https://cdn.yummy.co.id/content-images/images/20230815/b503653e9151fa1f210ea55b71588062.jpg?x-oss-process=image/format,webp",
+    desc: "Paket desain dan furnitur custom untuk ruang kerja di rumah yang fungsional dan estetis.",
+    thumb: "https://images.unsplash.com/photo-1613413561312-e329d024ed65?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 }) {
   return (
@@ -50,7 +50,7 @@ export default function HeroSplit({
             <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-700">
               <div className="flex items-center gap-2">
                 <span className="text-lg">🏗️</span>
-                <span>100+ Proyek Selesai</span>
+                <span>20+ Proyek Selesai</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-lg">💰</span>

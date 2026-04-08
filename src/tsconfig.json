@@ -7,9 +7,9 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/lib/*": ["src/lib/*"]
+      "@/*": ["*"],
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"]
     },
 
     "allowJs": true,
@@ -18,5 +18,5 @@
     "noEmit": true,
     "types": ["vite/client"]
   },
-  "include": ["src", "vite.config.js"]
+  "include": ["**/*", "../vite.config.js"]
 }

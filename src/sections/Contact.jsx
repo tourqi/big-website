@@ -120,7 +120,7 @@ export default function Contact() {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-gray-200">
                   <MapPin size={16} aria-hidden="true" />
                 </span>
-                <span>Bogor, Indonesia</span>
+                <span>Lingkungan 02 Citatah Dalam,  Kec. Cibinong, Kab. Bogor, Jawa Barat 16918</span>
               </div>
 
               {/* Quick WhatsApp CTA */}

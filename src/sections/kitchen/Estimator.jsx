@@ -21,15 +21,15 @@ export default function Estimator() {
   return (
     <Card className="rounded-3xl shadow-sm">
       <CardHeader>
-        <CardTitle>Hitung Anggaran Kitchen Set Anda</CardTitle>
+        <CardTitle>Hitung Anggaran Interior Anda</CardTitle>
         <CardDescription>Cukup pilih layout, ukuran, dan finishing—sistem kami akan langsung menampilkan estimasi biaya.</CardDescription>
       </CardHeader>
       <CardContent className="grid md:grid-cols-4 gap-4">
         <div className="space-y-2">
-          <Label>Pilih Layout</Label>
+          <Label>Pilih Jenis Ruang</Label>
           <Select value={layout} onValueChange={setLayout}>
             <SelectTrigger className="rounded-2xl"><SelectValue/></SelectTrigger>
-            <SelectContent>{["Single","L","U","Island","Galley"].map((s)=>(<SelectItem key={s} value={s}>{s}</SelectItem>))}</SelectContent>
+            <SelectContent>{["Dapur","Kamar Tidur","Living Room","Kantor"].map((s)=>(<SelectItem key={s} value={s}>{s}</SelectItem>))}</SelectContent>
           </Select>
         </div>
         <div className="space-y-2">
