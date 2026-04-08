@@ -63,8 +63,6 @@ export default function CataloguePage() {
     setPriceRange([2500000, 7000000]);
   };
 
-  const onPickStyle = (s) => setFilters((f)=>({ ...f, style: s }));
-
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:py-12">
       <DevTests />
@@ -72,7 +70,7 @@ export default function CataloguePage() {
       <Navbar />
 
       <div className="mt-8">
-        <InspirationCarousel onPickStyle={onPickStyle} />
+        <InspirationCarousel />
       </div>
 
       <div className="mt-6">
