@@ -1,25 +1,27 @@
+// src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import AppLayout from "@/components/AppLayout.jsx";
+import AppLayout from "@/components/AppLayout";
 
-import InteriorDesignSite from "./InteriorDesignSite.jsx";
-import Catalogue from "./pages/Catalogue.jsx";
-import PortfolioDetail from "./pages/PortfolioDetail.jsx";
-import KitchenSetGuide from "@/pages/Kitchen-Guide";
-import CatalogueRoom from "./pages/CatalogueRoom.jsx";
-import KitchenSetDesignDetail from "./pages/KitchenSetDesignDetail.jsx";
+import InteriorDesignSite   from "./InteriorDesignSite";
+import CataloguePage        from "@/pages/CataloguePage";        // sebelumnya: Catalogue.jsx
+import CatalogueStylesPage  from "@/pages/CatalogueStylesPage";
+import StyleDetailPage      from "@/pages/StyleDetailPage";
+import KitchenGuidePage     from "@/pages/KitchenGuidePage";     // sebelumnya: Kitchen-Guide.jsx
+import PortfolioDetailPage  from "@/pages/PortfolioDetail";
+import NotFound             from "@/pages/NotFound";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route path="/" element={<InteriorDesignSite />} />
-        <Route path="/catalogue" element={<Catalogue />} />
-        <Route path="/catalogue/:roomSlug" element={<CatalogueRoom />} />
-        <Route path="/catalogue/kitchen-set/:designSlug" element={<KitchenSetDesignDetail />} />
-        <Route path="/portfolio/:id" element={<PortfolioDetail />} />
-        <Route path="/kitchen-guide" element={<KitchenSetGuide />} />
-        <Route path="*" element={<div className="p-8">Halaman tidak ditemukan.</div>} />
+        <Route path="/"                         element={<InteriorDesignSite />} />
+        <Route path="/catalogue"                element={<CataloguePage />} />
+        <Route path="/catalogue/:categoryId"    element={<CatalogueStylesPage />} />
+        <Route path="/catalogue/:categoryId/:styleId" element={<StyleDetailPage />} />
+        <Route path="/portfolio/:id"            element={<PortfolioDetailPage />} />
+        <Route path="/kitchen-guide"            element={<KitchenGuidePage />} />
+        <Route path="*"                         element={<NotFound />} />
       </Route>
     </Routes>
   );

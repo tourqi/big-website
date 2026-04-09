@@ -3,6 +3,7 @@ import React, { useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { PROJECTS } from "@/data/projects.js";
 import Lightbox from "@/components/Lightbox.jsx";
+import { PLACEHOLDER_SRC, handleImageError } from "@/lib/imageHandlers";
 
 export default function PortfolioDetail() {
   const { id } = useParams();
@@ -42,12 +43,15 @@ export default function PortfolioDetail() {
       {/* Cover Notion-like (klik untuk lightbox) */}
       <div className="w-full">
         <div className="mx-auto max-w-6xl">
-          <div className="group relative aspect-[16/7] sm:aspect-[16/6] md:aspect-[16/5] overflow-hidden rounded-none md:rounded-3xl">
+          <div className="group relative aspect-[16/7] sm:aspect-[16/6] md:aspect-[16/5] overflow-hidden rounded-none md:rounded-3xl bg-gray-100">
             <img
               src={project.cover}
               alt={project.title}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02] cursor-zoom-in"
+              loading="lazy"
+              decoding="async"
               onClick={() => openLightbox([project.cover, ...(project.images || [])], 0)}
+              onError={(e) => handleImageError(e, PLACEHOLDER_SRC)}
             />
             <div className="pointer-events-none absolute inset-0 rounded-none md:rounded-3xl ring-1 ring-black/5" />
           </div>
@@ -90,12 +94,15 @@ export default function PortfolioDetail() {
                 {s.gallery?.length ? (
                   <div className="mt-6 grid sm:grid-cols-2 gap-4">
                     {s.gallery.map((src, i) => (
-                      <div key={i} className="relative group">
+                      <div key={i} className="relative group rounded-2xl overflow-hidden bg-gray-100">
                         <img
                           src={src}
-                          alt=""
+                          alt="Gallery image"
                           className="rounded-2xl w-full h-56 object-cover cursor-zoom-in transition-transform duration-300 group-hover:scale-[1.02]"
+                          loading="lazy"
+                          decoding="async"
                           onClick={() => openLightbox(s.gallery, i)}
+                          onError={(e) => handleImageError(e, PLACEHOLDER_SRC)}
                         />
                         <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/5" />
                       </div>
@@ -109,12 +116,15 @@ export default function PortfolioDetail() {
             {project.images?.length ? (
               <div className="mt-10 grid sm:grid-cols-2 gap-4">
                 {project.images.map((src, i) => (
-                  <div key={i} className="relative group">
+                  <div key={i} className="relative group rounded-2xl overflow-hidden bg-gray-100">
                     <img
                       src={src}
-                      alt=""
+                      alt="Project image"
                       className="rounded-2xl w-full h-56 object-cover cursor-zoom-in transition-transform duration-300 group-hover:scale-[1.02]"
+                      loading="lazy"
+                      decoding="async"
                       onClick={() => openLightbox(project.images, i)}
+                      onError={(e) => handleImageError(e, PLACEHOLDER_SRC)}
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/5" />
                   </div>

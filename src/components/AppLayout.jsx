@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
 import { scrollToId } from "@/lib/scrollToId.js";
 
@@ -29,6 +30,7 @@ export default function AppLayout() {
       <ScrollTopOnRoute />
       <HashScroller />
       <Navbar />
+      <Breadcrumbs />
       <main>
         <Outlet />
       </main>

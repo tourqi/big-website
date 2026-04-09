@@ -1,5 +1,5 @@
 // src/sections/Contact.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/Card.jsx";
 import { Button } from "@/components/ui/Button";
 import {
@@ -11,6 +11,7 @@ import {
   Youtube,
   Linkedin,
   MessageCircle,
+  Check,
 } from "lucide-react";
 
 const WA_PHONE = "6282145756660"; // <- ganti dengan nomor kamu (format 62... tanpa +)
@@ -23,6 +24,33 @@ const SOCIALS = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/bogorinteriorgarage", icon: Linkedin },
 ];
 
+// Validation functions
+const validateEmail = (email) => {
+  if (!email) return null; // email opsional
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email) ? null : "Email tidak valid";
+};
+
+const validatePhone = (phone) => {
+  if (!phone) return "Nomor WhatsApp wajib diisi";
+  const digits = phone.replace(/[^\d]/g, "");
+  if (digits.length < 10) return "Nomor WhatsApp terlalu pendek (min 10 digit)";
+  if (digits.length > 15) return "Nomor WhatsApp terlalu panjang (max 15 digit)";
+  return null;
+};
+
+const validateName = (name) => {
+  if (!name.trim()) return "Nama wajib diisi";
+  if (name.trim().length < 2) return "Nama minimal 2 karakter";
+  return null;
+};
+
+const validateMessage = (message) => {
+  if (!message.trim()) return null; // opsional
+  if (message.trim().length < 5) return "Pesan minimal 5 karakter";
+  return null;
+};
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -32,9 +60,58 @@ export default function Contact() {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
   const onChange = (e) => {
     const { name, value } = e.target;
     setForm((s) => ({ ...s, [name]: value }));
+    // Clear error saat user mulai typing
+    if (touched[name]) {
+      validateField(name, value);
+    }
+  };
+
+  const onBlur = (e) => {
+    const { name, value } = e.target;
+    setTouched((t) => ({ ...t, [name]: true }));
+    validateField(name, value);
+  };
+
+  const validateField = (name, value) => {
+    let error = null;
+    switch (name) {
+      case "name":
+        error = validateName(value);
+        break;
+      case "email":
+        error = validateEmail(value);
+        break;
+      case "phone":
+        error = validatePhone(value);
+        break;
+      case "message":
+        error = validateMessage(value);
+        break;
+      default:
+        break;
+    }
+    setErrors((e) => ({ ...e, [name]: error }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    newErrors.name = validateName(form.name);
+    newErrors.email = validateEmail(form.email);
+    newErrors.phone = validatePhone(form.phone);
+    newErrors.message = validateMessage(form.message);
+
+    setErrors(newErrors);
+    setTouched({ name: true, email: true, phone: true, message: true, projectType: true });
+
+    return !Object.values(newErrors).some((e) => e !== null);
   };
 
   const to62 = (raw) => {
@@ -60,20 +137,42 @@ export default function Contact() {
     return lines.join("\n");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // validasi minimal
-    if (!form.name || !form.phone) {
-      alert("Nama dan Telepon wajib diisi.");
+    if (!validateForm()) {
       return;
     }
 
-    const text = buildMessage(form);
-    const url = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`;
+    setIsLoading(true);
 
-    // buka WhatsApp (tab baru kalau desktop)
-    window.open(url, "_blank");
+    // Simulasi delay (remove ini jika using real API nanti)
+    setTimeout(() => {
+      const text = buildMessage(form);
+      const url = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text)}`;
+
+      // buka WhatsApp (tab baru kalau desktop)
+      window.open(url, "_blank");
+
+      // Show success message
+      setShowSuccess(true);
+
+      // Reset form
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        projectType: "Residensial",
+        message: "",
+      });
+      setErrors({});
+      setTouched({});
+
+      // Hide success after 5 seconds
+      setTimeout(() => setShowSuccess(false), 5000);
+
+      setIsLoading(false);
+    }, 500);
   };
 
   const quickWaLink = () => {
@@ -167,48 +266,94 @@ export default function Contact() {
           {/* Form */}
           <Card className="shadow-sm">
             <CardContent>
+              {/* Success notification */}
+              {showSuccess && (
+                <div className="mb-4 bg-green-50 border border-green-200 rounded-lg p-4 flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div className="flex-1">
+                    <p className="font-medium text-green-900 text-sm">
+                      Pesan terkirim!
+                    </p>
+                    <p className="text-xs text-green-700 mt-1">
+                      Terima kasih telah menghubungi kami. Kami akan merespons dalam 1×24 jam.
+                    </p>
+                  </div>
+                </div>
+              )}
+
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="text-sm">Nama</label>
+                  <label className="text-sm font-medium">
+                    Nama {errors.name && "(required)"}
+                  </label>
                   <input
                     name="name"
                     value={form.name}
                     onChange={onChange}
-                    required
-                    className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                    onBlur={onBlur}
+                    className={`mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 transition-all ${
+                      errors.name && touched.name
+                        ? "border-red-400 bg-red-50 focus:ring-red-500"
+                        : "border-gray-300 focus:ring-black"
+                    }`}
                     placeholder="Nama lengkap"
                   />
+                  {errors.name && touched.name && (
+                    <p className="text-xs text-red-600 mt-1">{errors.name}</p>
+                  )}
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm">Email</label>
+                    <label className="text-sm font-medium">Email</label>
                     <input
-                      type="email"
+                      type="text"
                       name="email"
                       value={form.email}
                       onChange={onChange}
-                      className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                      onBlur={onBlur}
+                      className={`mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 transition-all ${
+                        errors.email && touched.email
+                          ? "border-red-400 bg-red-50 focus:ring-red-500"
+                          : "border-gray-300 focus:ring-black"
+                      }`}
                       placeholder="email@domain.com"
                     />
+                    {errors.email && touched.email && (
+                      <p className="text-xs text-red-600 mt-1">{errors.email}</p>
+                    )}
                   </div>
                   <div>
-                    <label className="text-sm">Telepon (Whatsapp)</label>
+                    <label className="text-sm font-medium">
+                      Telepon (WhatsApp) {errors.phone && touched.phone && "(required)"}
+                    </label>
                     <input
+                      type="tel"
                       name="phone"
                       value={form.phone}
-                      onChange={(e) =>
-                        setForm((s) => ({ ...s, phone: to62(e.target.value) }))
-                      }
-                      required
-                      className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                      onChange={(e) => {
+                        const normalized = to62(e.target.value);
+                        setForm((s) => ({ ...s, phone: normalized }));
+                        if (touched.phone) {
+                          validateField("phone", normalized);
+                        }
+                      }}
+                      onBlur={onBlur}
+                      className={`mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 transition-all ${
+                        errors.phone && touched.phone
+                          ? "border-red-400 bg-red-50 focus:ring-red-500"
+                          : "border-gray-300 focus:ring-black"
+                      }`}
                       placeholder="62xxxxxxxxxxx"
                     />
+                    {errors.phone && touched.phone && (
+                      <p className="text-xs text-red-600 mt-1">{errors.phone}</p>
+                    )}
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-sm">Jenis Proyek</label>
+                  <label className="text-sm font-medium">Jenis Proyek</label>
                   <select
                     name="projectType"
                     value={form.projectType}
@@ -223,23 +368,35 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-sm">Pesan</label>
+                  <label className="text-sm font-medium">Pesan</label>
                   <textarea
                     name="message"
                     rows={4}
                     value={form.message}
                     onChange={onChange}
-                    className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
+                    onBlur={onBlur}
+                    className={`mt-1 w-full rounded-xl border px-3 py-2 focus:outline-none focus:ring-2 transition-all ${
+                      errors.message && touched.message
+                        ? "border-red-400 bg-red-50 focus:ring-red-500"
+                        : "border-gray-300 focus:ring-black"
+                    }`}
                     placeholder="Ceritakan kebutuhan Anda (ukuran ruangan, gaya yang disukai, estimasi budget, dll.)"
                   />
+                  {errors.message && touched.message && (
+                    <p className="text-xs text-red-600 mt-1">{errors.message}</p>
+                  )}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
                   <div className="text-xs text-gray-500">
                     Dengan klik kirim, Anda akan diarahkan ke WhatsApp.
                   </div>
-                  <Button type="submit" className="justify-center">
-                    Kirim via WhatsApp
+                  <Button
+                    type="submit"
+                    className="justify-center"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Loading..." : "Kirim via WhatsApp"}
                   </Button>
                 </div>
               </form>

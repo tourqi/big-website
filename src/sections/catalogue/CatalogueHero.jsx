@@ -1,14 +1,14 @@
+// src/sections/catalogue/CatalogueHero.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Ruler, Sparkles, ShieldCheck, Star, Truck } from "lucide-react";
 
-export default function Hero() {
-  // 🔸 Ganti link di bawah sesuai foto kamu (misal dari website, Google Drive direct, atau Cloudinary)
-  const heroImage =
-    "https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?q=80&w=2320&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=774&auto=format&fit=crop";
 
+export default function CatalogueHero() {
   return (
     <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 via-white to-emerald-50 p-8 md:p-12 shadow-sm">
       <motion.div
@@ -17,10 +17,10 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          {/* Text */}
+          {/* Teks */}
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Interior custom untuk setiap ruang hidup Anda
+              Temukan Kitchen Set yang Pas dengan Gaya &amp; Anggaran Anda
             </h1>
             <p className="mt-4 text-base md:text-lg text-muted-foreground">
               Pilih dari berbagai inspirasi nyata, cek estimasi harga dalam hitungan detik,
@@ -28,11 +28,17 @@ export default function Hero() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <Button size="lg" className="rounded-2xl">
-                <Sparkles className="mr-2 h-5 w-5" /> Konsultasi Gratis
+              <Button size="lg" className="rounded-2xl" asChild>
+                <a href="/#contact">
+                  <Sparkles className="mr-2 h-5 w-5" />
+                  Konsultasi Gratis
+                </a>
               </Button>
-              <Button size="lg" variant="secondary" className="rounded-2xl">
-                <Ruler className="mr-2 h-5 w-5" /> Hitung Estimasi
+              <Button size="lg" variant="secondary" className="rounded-2xl" asChild>
+                <a href="#estimator">
+                  <Ruler className="mr-2 h-5 w-5" />
+                  Hitung Estimasi
+                </a>
               </Button>
             </div>
 
@@ -49,11 +55,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* 🔸 pakai link image */}
+          {/* Gambar */}
           <div className="flex-1 min-w-[260px]">
             <div className="aspect-[4/3] w-full rounded-3xl overflow-hidden border shadow-inner">
               <img
-                src={heroImage}
+                src={HERO_IMAGE}
                 alt="Foto proyek unggulan BIG"
                 className="w-full h-full object-cover"
                 loading="lazy"
