@@ -20,11 +20,14 @@ export default function CatalogueHero() {
           {/* Teks */}
           <div className="max-w-2xl">
             <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Temukan Kitchen Set yang Pas dengan Gaya &amp; Anggaran Anda
+              Temukan Inspirasi Interior yang Sesuai dengan Gaya &amp; Kebutuhan Anda
             </h1>
             <p className="mt-4 text-base md:text-lg text-muted-foreground">
-              Pilih dari berbagai inspirasi nyata, cek estimasi harga dalam hitungan detik,
-              dan konsultasikan desain Anda secara gratis. Transparan, cepat, tanpa ribet.
+              Katalog ini bukan sekadar inspirasi, tapi panduan untuk memahami setiap detail interior mulai dari material, finishing, hingga fungsi ruang.
+
+              Pelajari tiap konsep dan temukan solusi yang tidak hanya indah, tapi juga fungsional dan tahan lama.
+
+              Karena interior yang baik adalah yang nyaman dan berkualitas untuk digunakan setiap hari.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

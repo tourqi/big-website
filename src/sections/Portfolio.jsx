@@ -140,15 +140,25 @@ export default function Portfolio() {
         {/* Mosaic responsif + animasi fade */}
         <div
           className={
-            "grid gap-6 transition-opacity duration-300 " +
+            "transition-opacity duration-300 " +
             (isFading ? "opacity-0" : "opacity-100")
           }
         >
-          <div className="grid md:grid-cols-2 gap-6 auto-rows-[200px] sm:auto-rows-[260px] md:auto-rows-[320px] lg:auto-rows-[380px]">
+          {/* Mobile: 2 kolom grid sederhana */}
+          <div className="grid grid-cols-2 md:hidden gap-2 auto-rows-[180px]">
+            {filtered.map((item) => (
+              <Card key={item.id} className="p-0 rounded-2xl border-0 shadow-md">
+                <Tile item={item} className="h-full w-full" />
+              </Card>
+            ))}
+          </div>
+
+          {/* Desktop: Mosaic layout */}
+          <div className="hidden md:grid gap-6 auto-rows-[300px] lg:auto-rows-[360px] grid-cols-2">
             {/* Kiri: Featured (span 2 baris) */}
             {featuredItem && (
-              <Card className="p-0 rounded-3xl border-0 shadow-lg md:row-span-2">
-                <div className="aspect-[4/3] md:h-full md:aspect-auto">
+              <Card className="p-0 rounded-3xl border-0 shadow-lg row-span-2">
+                <div className="h-full">
                   <Tile item={featuredItem} className="h-full w-full" />
                 </div>
               </Card>
@@ -157,7 +167,7 @@ export default function Portfolio() {
             {/* Kanan atas: wide */}
             {rest[0] && (
               <Card className="p-0 rounded-3xl border-0 shadow-lg">
-                <div className="aspect-[4/3] md:h-full md:aspect-auto">
+                <div className="h-full">
                   <Tile item={rest[0]} className="h-full w-full" />
                 </div>
               </Card>
@@ -166,7 +176,7 @@ export default function Portfolio() {
             {/* Kanan bawah: dua kecil */}
             {rest.slice(1, 3).map((it) => (
               <Card key={it.id} className="p-0 rounded-3xl border-0 shadow-lg">
-                <div className="aspect-[4/3] md:h-full md:aspect-auto">
+                <div className="h-full">
                   <Tile item={it} className="h-full w-full" />
                 </div>
               </Card>

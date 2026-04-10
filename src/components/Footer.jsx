@@ -1,5 +1,6 @@
 // src/components/Footer.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import { SITE } from "@/config/site.js"; // jika alias "@" belum aktif, ganti ke: "../config/site.js"
 
 export default function Footer() {
@@ -11,8 +12,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="hover:underline">Kebijakan Privasi</a>
-            <a href="#" className="hover:underline">Syarat & Ketentuan</a>
+            <Link to="/privacy" className="hover:underline">Kebijakan Privasi</Link>
+            <Link to="/terms" className="hover:underline">Syarat & Ketentuan</Link>
           </div>
         </div>
       </div>

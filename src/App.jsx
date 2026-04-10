@@ -9,6 +9,8 @@ import CatalogueStylesPage  from "@/pages/CatalogueStylesPage";
 import StyleDetailPage      from "@/pages/StyleDetailPage";
 import KitchenGuidePage     from "@/pages/KitchenGuidePage";     // sebelumnya: Kitchen-Guide.jsx
 import PortfolioDetailPage  from "@/pages/PortfolioDetail";
+import PrivacyInfo          from "@/pages/PrivacyInfo";
+import TermsInfo            from "@/pages/TermsInfo";
 import NotFound             from "@/pages/NotFound";
 
 export default function App() {
@@ -21,6 +23,8 @@ export default function App() {
         <Route path="/catalogue/:categoryId/:styleId" element={<StyleDetailPage />} />
         <Route path="/portfolio/:id"            element={<PortfolioDetailPage />} />
         <Route path="/kitchen-guide"            element={<KitchenGuidePage />} />
+        <Route path="/privacy"                  element={<PrivacyInfo />} />
+        <Route path="/terms"                    element={<TermsInfo />} />
         <Route path="*"                         element={<NotFound />} />
       </Route>
     </Routes>

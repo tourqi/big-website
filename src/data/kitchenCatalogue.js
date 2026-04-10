@@ -5,7 +5,7 @@ export const ROOM_CATEGORIES = [
   {
     id: "cat-001",
     title: "Living Room",
-    image: "/catalogue/living-room.jpg",
+    image: "https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2070&auto=format&fit=crop",
     description: "Desain furniture dan dekorasi ruang tamu yang nyaman dan stylish.",
     count: "12+ desain",
     styles: [
@@ -117,7 +117,7 @@ export const ROOM_CATEGORIES = [
   {
     id: "cat-002",
     title: "Bedroom",
-    image: "/catalogue/bedroom.jpg",
+    image: "https://images.unsplash.com/photo-1775241186452-c3d99b09f223?q=80&w=987&auto=format&fit=crop",
     description: "Kamar tidur dengan konsep modern, minimalis, hingga klasik mewah.",
     count: "15+ desain",
     styles: [
@@ -226,7 +226,7 @@ export const ROOM_CATEGORIES = [
   {
     id: "cat-003",
     title: "Dining Room",
-    image: "/catalogue/dining-room.jpg",
+    image: "https://plus.unsplash.com/premium_photo-1674480165930-609ce0c29666?q=80&w=1014&auto=format&fit=crop",
     description: "Ruang makan fungsional dengan berbagai pilihan gaya interior.",
     count: "10+ desain",
     styles: [
@@ -335,14 +335,14 @@ export const ROOM_CATEGORIES = [
   {
     id: "cat-004",
     title: "Kitchen Set",
-    image: "/catalogue/kitchen-set.jpg",
+    image: "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?q=80&w=1565&auto=format&fit=crop",
     description: "Dapur custom dengan layout dan material pilihan Anda.",
     count: "20+ desain",
     styles: [
       {
         id: "ks-minimalist",
         name: "Minimalist",
-        image: "/catalogue/ks-minimalist.jpg",
+        image: "https://images.unsplash.com/photo-1743411316005-6c0294033437?q=80&w=1943&auto=format&fit=crop",
         description: "Kitchen set sederhana dan rapi dengan fungsi optimal tanpa berlebihan.",
         components: [
           {
@@ -350,10 +350,10 @@ export const ROOM_CATEGORIES = [
             name: "Board/Carcass",
             description: "Material utama rangka kabinet",
             options: [
-              { id: "opt-plywood", name: "Plywood 15mm", description: "Kayu lapis berkualitas, tahan lembap untuk zona basah", image: "https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
-              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=400&auto=format&fit=crop", pricePerMeter: 900000 },
-              { id: "opt-pvc", name: "PVC Board", description: "Tahan air sempurna, sangat tahan lama untuk dapur", image: "https://images.unsplash.com/photo-1556126328-de22c82df69c?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1000000 },
-              { id: "opt-mdf", name: "MDF 18mm", description: "Permukaan halus, cocok untuk cat duco finishing", image: "https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?q=80&w=400&auto=format&fit=crop", pricePerMeter: 850000 },
+              { id: "opt-plywood", name: "Plywood 15mm", description: "Kayu lapis berkualitas, tahan lembap untuk zona basah", image: "https://id.chinakitchencabinets.net/Content/uploads/2023211506/20230321135938c3ed1319652e4bffb56a8b7667532dda.jpg", pricePerMeter: 800000 },
+              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", image: "https://static.wixstatic.com/media/3f747e_662be33eb10943bda18c3c31442b31e4~mv2.png/v1/fill/w_980,h_686,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/3f747e_662be33eb10943bda18c3c31442b31e4~mv2.png", pricePerMeter: 900000 },
+              { id: "opt-pvc", name: "PVC Board", description: "Tahan air sempurna, sangat tahan lama untuk dapur", image: "https://icdn.tradew.com/file/201706/1572031/jpg/7873338.jpg?x-oss-process=image/quality,Q_90", pricePerMeter: 1000000 },
+              { id: "opt-mdf", name: "MDF 18mm", description: "Permukaan halus, cocok untuk cat duco finishing", image: "https://static.wixstatic.com/media/3f747e_fd7ab11098c74718b183a2c45565d535~mv2.webp/v1/fill/w_568,h_398,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3f747e_fd7ab11098c74718b183a2c45565d535~mv2.webp", pricePerMeter: 850000 },
             ],
           },
           {
@@ -372,9 +372,9 @@ export const ROOM_CATEGORIES = [
             name: "Engsel/Hinge",
             description: "Mekanisme buka tutup pintu",
             options: [
-              { id: "opt-hinge-soft-blum", name: "Soft-Close Blum", description: "Premium slow-motion, tutup perlahan dan halus", image: "https://images.unsplash.com/photo-1560436651-f58fcc6c1d2f?q=80&w=400&auto=format&fit=crop", pricePerMeter: 450000 },
-              { id: "opt-hinge-soft-hafele", name: "Soft-Close Hafele", description: "Kualitas baik, dampening shock, hemat energi", image: "https://images.unsplash.com/photo-1560436651-f58fcc6c1d2f?q=80&w=400&auto=format&fit=crop", pricePerMeter: 350000 },
-              { id: "opt-hinge-standar", name: "Engsel Standar", description: "Engsel biasa tanpa soft-close, budget ekonomis", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+              { id: "opt-hinge-soft-blum", name: "Soft-Close Blum", description: "Premium slow-motion, tutup perlahan dan halus", image: "https://kjpselecthardwoods.com/cdn/shop/products/blum-hinge-110-degree-2_800x533.jpg?v=1638153549", pricePerMeter: 450000 },
+              { id: "opt-hinge-soft-hafele", name: "Soft-Close Hafele", description: "Kualitas baik, dampening shock, hemat energi", image: "https://down-id.img.susercontent.com/file/id-11134207-7r98o-lodfbtu34ot587.webp", pricePerMeter: 350000 },
+              { id: "opt-hinge-standar", name: "Engsel Standar", description: "Engsel biasa tanpa soft-close, budget ekonomis", image: "https://media.monotaro.id/mid01/big/Bahan%20Bangunan%2C%20Perlengkapan%20Rumah%20%26%20Cat/Perangkat%20Arsitektur/Peralatan%20Furnitur/Perkakas%20Furnitur/TACO%20Hardware%20Engsel%20Sendok%20Lurus%20Softclose/qdP108409949-3.jpg", pricePerMeter: 200000 },
             ],
           },
         ],
@@ -382,7 +382,7 @@ export const ROOM_CATEGORIES = [
       {
         id: "ks-scandinavian",
         name: "Scandinavian",
-        image: "/catalogue/ks-scandinavian.jpg",
+        image: "https://images.unsplash.com/photo-1721614665022-e9895a3dfa26?q=80&w=2070&auto=format&fit=crop",
         description: "Dapur cerah dengan finishing kayu muda dan storage cerdas.",
         components: [
           {
@@ -418,7 +418,7 @@ export const ROOM_CATEGORIES = [
       {
         id: "ks-japandi",
         name: "Japandi",
-        image: "/catalogue/ks-japandi.jpg",
+        image: "https://media.dekoruma.com/design-and-build/projects/159161/files/KITCHEN_JAPANDI_2(6957ae62-25da-4f52-9073-46e4f37a291f).png?dpr=1.5&fit=crop&height=520&optimize=medium&quality=50",
         description: "Perpaduan elegan gaya Jepang dan Skandinavia yang warm.",
         components: [
           {
@@ -453,7 +453,7 @@ export const ROOM_CATEGORIES = [
       {
         id: "ks-classic",
         name: "Klasik",
-        image: "/catalogue/ks-classic.jpg",
+        image: "https://images.unsplash.com/photo-1721614663991-1b9095c34249?q=80&w=2070&auto=format&fit=crop",
         description: "Kitchen set timeless dengan detail dekoratif dan finishing berkualitas.",
         components: [
           {
