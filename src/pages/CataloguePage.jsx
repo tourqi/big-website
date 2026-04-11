@@ -12,6 +12,7 @@ import MicroEdu            from "@/sections/catalogue/MicroEdu";
 import WhyUs               from "@/sections/catalogue/WhyUs";
 import SeoLinkHub          from "@/sections/catalogue/SeoLinkHub";
 import GuideCallout        from "@/sections/catalogue/GuideCallout";
+import RoomTabs            from "@/sections/catalogue/RoomTabs";
 
 import { CATALOGUE_ITEMS } from "@/data/kitchenCatalogue";
 
@@ -58,15 +59,26 @@ function applySorting(items, sort) {
 }
 
 export default function CataloguePage() {
-  const [filters,    setFilters]    = useState(DEFAULT_FILTERS);
-  const [sort,       setSort]       = useState(DEFAULT_SORT);
+  const [activeRoom, setRoom]     = useState("all");
+  const [filters,    setFilters]  = useState(DEFAULT_FILTERS);
+  const [sort,       setSort]     = useState(DEFAULT_SORT);
   const [priceRange, setPriceRange] = useState(DEFAULT_PRICE);
-  const [query,      setQuery]      = useState("");
+  const [query,      setQuery]    = useState("");
+
+  // Filter items by room type first
+  const roomFilteredItems = useMemo(() => {
+    if (activeRoom === "all") return CATALOGUE_ITEMS;
+    return CATALOGUE_ITEMS.filter((item) => {
+      // Match room type from item's room property or category
+      const itemRoom = item.room || item.category || "";
+      return itemRoom.toLowerCase().includes(activeRoom.toLowerCase());
+    });
+  }, [activeRoom]);
 
   const visibleItems = useMemo(() => {
-    const filtered = applyFilters(CATALOGUE_ITEMS, filters, priceRange, query);
+    const filtered = applyFilters(roomFilteredItems, filters, priceRange, query);
     return applySorting(filtered, sort);
-  }, [filters, sort, priceRange, query]);
+  }, [roomFilteredItems, filters, sort, priceRange, query]);
 
   const handleReset = () => {
     setFilters(DEFAULT_FILTERS);
@@ -81,6 +93,9 @@ export default function CataloguePage() {
     <div className="mx-auto max-w-7xl px-4 py-8 md:py-12 space-y-6">
       {/* Hero */}
       <CatalogueHero />
+
+      {/* Room Tabs Navigation - Sticky */}
+      <RoomTabs activeRoom={activeRoom} onChangeRoom={setRoom} />
 
       {/* Kategori Katalog */}
       <CatalogueCategories />
@@ -98,6 +113,7 @@ export default function CataloguePage() {
         setPriceRange={setPriceRange}
         resultCount={visibleItems.length}
         query={query}
+        activeRoom={activeRoom}
         setQuery={setQuery}
         onReset={handleReset}
       />

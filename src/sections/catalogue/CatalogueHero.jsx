@@ -3,10 +3,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { Ruler, Sparkles, ShieldCheck, Star, Truck } from "lucide-react";
+import { Ruler, Sparkles, ShieldCheck, Star, Truck, Home } from "lucide-react";
 
 const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=774&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop";
 
 export default function CatalogueHero() {
   return (
@@ -19,15 +19,17 @@ export default function CatalogueHero() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           {/* Teks */}
           <div className="max-w-2xl">
+            <Badge variant="secondary" className="rounded-full mb-3">
+              <Home className="h-3.5 w-3.5 mr-1" />
+              4 Ruangan Utama
+            </Badge>
             <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">
-              Temukan Inspirasi Interior yang Sesuai dengan Gaya &amp; Kebutuhan Anda
+              Solusi Interior Komplet untuk 4 Ruangan Utama
             </h1>
             <p className="mt-4 text-base md:text-lg text-muted-foreground">
-              Katalog ini bukan sekadar inspirasi, tapi panduan untuk memahami setiap detail interior mulai dari material, finishing, hingga fungsi ruang.
-
-              Pelajari tiap konsep dan temukan solusi yang tidak hanya indah, tapi juga fungsional dan tahan lama.
-
-              Karena interior yang baik adalah yang nyaman dan berkualitas untuk digunakan setiap hari.
+              Dari Living Room, Bedroom, Dining Room, hingga Bathroom — 
+              temukan desain yang tidak hanya indah, tapi juga fungsional dan tahan lama.
+              Setiap detail dirancang untuk kenyamanan hidup sehari-hari.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

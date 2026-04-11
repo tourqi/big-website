@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/Label";
 import { Slider } from "@/components/ui/Slider";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { Filter, Search, X } from "lucide-react";
+import { Filter, Search, X, Zap, TrendingUp, DollarSign } from "lucide-react";
 import { ALL, toIDR, toSelectValue, fromSelectValue } from "@/lib/format";
 import { LAYOUT_OPTIONS, STYLE_OPTIONS, FINISH_OPTIONS, TOP_OPTIONS } from "@/data/kitchenCatalogue";
 
@@ -18,6 +18,13 @@ const SORT_OPTIONS = [
   "Harga Tinggi→Rendah",
   "Lead time tercepat",
   "A–Z",
+];
+
+// Quick filter presets
+const QUICK_FILTERS = [
+  { id: "budget", label: "Under 50jt", icon: DollarSign, value: { max: 50000000 } },
+  { id: "premium", label: "Premium", icon: Zap, value: { min: 50000000 } },
+  { id: "trending", label: "Trending", icon: TrendingUp, value: { trending: true } },
 ];
 
 // ─── FilterBar ───────────────────────────────────────────────────────────────
@@ -32,7 +39,10 @@ export function CatalogueFilter({
   query,
   setQuery,
   onReset,
+  activeRoom = "all",
 }) {
+  // Get room-specific filter config
+  const roomConfig = ROOM_FILTERS_CONFIG[activeRoom] || ROOM_FILTERS_CONFIG.kitchen;
   const safeRange = Array.isArray(priceRange) ? priceRange : [2500000, 7000000];
   const min = Number.isFinite(safeRange[0]) ? safeRange[0] : 2500000;
   const max = Number.isFinite(safeRange[1]) ? safeRange[1] : 7000000;
@@ -55,49 +65,92 @@ export function CatalogueFilter({
             </div>
           </div>
 
-          {/* Dropdown + Search */}
+          {/* Quick Filters */}
+          <div className="flex flex-wrap gap-2 pt-2">
+            <span className="text-sm text-muted-foreground self-center mr-2">Quick filters:</span>
+            {QUICK_FILTERS.map((qf) => (
+              <Button
+                key={qf.id}
+                variant="outline"
+                size="sm"
+                className="rounded-full flex items-center gap-1.5"
+                onClick={() => {
+                  if (qf.value.max) {
+                    setPriceRange([2500000, qf.value.max]);
+                  } else if (qf.value.min) {
+                    setPriceRange([qf.value.min, 7000000]);
+                  }
+                }}
+              >
+                {qf.icon && <qf.icon className="h-3.5 w-3.5" />}
+                {qf.label}
+              </Button>
+            ))}
+          </div>
+
+          {/* Dropdown + Search - Dynamic per Room */}
           <div className="grid grid-cols-2 gap-3 md:grid-cols-6">
+            {/* Layout Filter - Dynamic */}
             <Select
               value={toSelectValue(filters?.layout)}
               onValueChange={(v) => setFilters((f) => ({ ...f, layout: fromSelectValue(v) }))}
             >
-              <SelectTrigger className="rounded-2xl"><SelectValue placeholder="Layout" /></SelectTrigger>
+              <SelectTrigger className="rounded-2xl">
+                <SelectValue placeholder={roomConfig.layout?.label || "Layout"} />
+              </SelectTrigger>
               <SelectContent>
-                <SelectItem value={ALL}>Semua layout</SelectItem>
-                {LAYOUT_OPTIONS.map((l) => <SelectItem key={l} value={l}>{l}</SelectItem>)}
+                <SelectItem value={ALL}>Semua {roomConfig.layout?.label || "layout"}</SelectItem>
+                {(roomConfig.layout?.options || LAYOUT_OPTIONS).map((l) => (
+                  <SelectItem key={l} value={l}>{l}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
 
+            {/* Style Filter - Dynamic */}
             <Select
               value={toSelectValue(filters?.style)}
               onValueChange={(v) => setFilters((f) => ({ ...f, style: fromSelectValue(v) }))}
             >
-              <SelectTrigger className="rounded-2xl"><SelectValue placeholder="Gaya" /></SelectTrigger>
+              <SelectTrigger className="rounded-2xl">
+                <SelectValue placeholder={roomConfig.style?.label || "Gaya"} />
+              </SelectTrigger>
               <SelectContent>
-                <SelectItem value={ALL}>Semua gaya</SelectItem>
-                {STYLE_OPTIONS.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                <SelectItem value={ALL}>Semua {roomConfig.style?.label || "gaya"}</SelectItem>
+                {(roomConfig.style?.options || STYLE_OPTIONS).map((s) => (
+                  <SelectItem key={s} value={s}>{s}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
 
+            {/* Finish Filter - Dynamic */}
             <Select
               value={toSelectValue(filters?.finish)}
               onValueChange={(v) => setFilters((f) => ({ ...f, finish: fromSelectValue(v) }))}
             >
-              <SelectTrigger className="rounded-2xl"><SelectValue placeholder="Finishing" /></SelectTrigger>
+              <SelectTrigger className="rounded-2xl">
+                <SelectValue placeholder={roomConfig.finish?.label || "Finishing"} />
+              </SelectTrigger>
               <SelectContent>
-                <SelectItem value={ALL}>Semua finishing</SelectItem>
-                {FINISH_OPTIONS.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                <SelectItem value={ALL}>Semua {roomConfig.finish?.label || "finishing"}</SelectItem>
+                {(roomConfig.finish?.options || FINISH_OPTIONS).map((s) => (
+                  <SelectItem key={s} value={s}>{s}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
 
+            {/* Top Filter - Dynamic */}
             <Select
               value={toSelectValue(filters?.top)}
               onValueChange={(v) => setFilters((f) => ({ ...f, top: fromSelectValue(v) }))}
             >
-              <SelectTrigger className="rounded-2xl"><SelectValue placeholder="Top table" /></SelectTrigger>
+              <SelectTrigger className="rounded-2xl">
+                <SelectValue placeholder={roomConfig.top?.label || "Top"} />
+              </SelectTrigger>
               <SelectContent>
-                <SelectItem value={ALL}>Semua top</SelectItem>
-                {TOP_OPTIONS.map((s) => <SelectItem key={s} value={s}>{s}</SelectItem>)}
+                <SelectItem value={ALL}>Semua {roomConfig.top?.label || "top"}</SelectItem>
+                {(roomConfig.top?.options || TOP_OPTIONS).map((s) => (
+                  <SelectItem key={s} value={s}>{s}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
 
@@ -174,3 +227,80 @@ export function AppliedChips({ filters = {}, priceRange, onClearAll }) {
     </div>
   );
 }
+
+// ─── ROOM-SPECIFIC FILTERS CONFIG ────────────────────────────────────────────
+// Filter options yang berbeda untuk setiap ruangan
+export const ROOM_FILTERS_CONFIG = {
+  "kitchen": {
+    layout: {
+      label: "Layout Dapur",
+      options: ["Single", "L", "U", "Island", "Galley"],
+    },
+    style: {
+      label: "Gaya Desain",
+      options: ["Modern", "Minimal", "Japandi", "Klasik", "Premium", "Industrial", "Handleless", "Shaker", "Natural"],
+    },
+    finish: {
+      label: "Finishing Pintu",
+      options: ["HPL", "Duco Matte", "Duco Satin", "Duco Gloss", "Veneer Oak + Clear Coat", "HPL Matte", "HPL Textured"],
+    },
+    top: {
+      label: "Top Table",
+      options: ["Granite", "Quartz", "Solid Surface", "Stainless", "HPL"],
+    },
+  },
+  "living-room": {
+    layout: {
+      label: "Tipe Ruangan",
+      options: ["Small", "Medium", "Large", "Open Plan"],
+    },
+    style: {
+      label: "Gaya Desain",
+      options: ["Modern", "Klasik", "Industrial", "Scandinavian", "Cozy", "Minimalist", "Luxury"],
+    },
+    finish: {
+      label: "Material Utama",
+      options: ["Fabric", "Leather", "Wood", "Metal", "Glass", "Velvet"],
+    },
+    top: {
+      label: "Pencahayaan",
+      options: ["LED", "Pendant", "Track Light", "Floor Lamp", "Chandelier", "Natural Light"],
+    },
+  },
+  "bedroom": {
+    layout: {
+      label: "Tipe Kamar",
+      options: ["Small", "Medium", "Large", "Master Bedroom", "Kids Room", "Guest Room"],
+    },
+    style: {
+      label: "Gaya Desain",
+      options: ["Modern", "Klasik", "Scandinavian", "Cozy", "Minimalist", "Luxury", "Romantic"],
+    },
+    finish: {
+      label: "Material Headboard",
+      options: ["Fabric", "Leather", "Wood", "Velvet", "Linen", "Suede"],
+    },
+    top: {
+      label: "Tipe Ranjang",
+      options: ["Sistem", "Rod", "Platform", "Storage Bed", "Canopy", "Bunk Bed"],
+    },
+  },
+  "bathroom": {
+    layout: {
+      label: "Tipe Bathroom",
+      options: ["Small", "Medium", "Large", "Master Bath", "Powder Room", "Walk-in Shower"],
+    },
+    style: {
+      label: "Gaya Desain",
+      options: ["Modern", "Spa", "Minimalist", "Luxury", "Classic", "Industrial"],
+    },
+    finish: {
+      label: "Material Dinding",
+      options: ["Ceramic", "Porcelain", "Marble", "Granite", "Mosaic", "Subway Tile"],
+    },
+    top: {
+      label: "Countertop",
+      options: ["Granite", "Quartz", "Marble", "Solid Surface", "Ceramic", "Glass"],
+    },
+  },
+};

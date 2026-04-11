@@ -22,7 +22,7 @@ export default function CatalogueCategories() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {ROOM_CATEGORIES.map((category) => (
             <div
               key={category.id}

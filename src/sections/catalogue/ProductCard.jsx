@@ -1,9 +1,10 @@
 // src/sections/catalogue/ProductCard.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { toIDR } from "@/lib/format";
+import { Heart, MessageCircle, ArrowRight } from "lucide-react";
 
 const FALLBACK_SRC =
   "data:image/svg+xml;utf8," +
@@ -31,8 +32,10 @@ function resolveImage(item) {
   return FALLBACK_SRC;
 }
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item, roomType = "kitchen" }) {
   if (!item || typeof item !== "object") return null;
+
+  const [isWishlisted, setIsWishlisted] = useState(false);
 
   const imgSrc      = resolveImage(item);
   const name        = item.name || "Tanpa Nama";
@@ -52,6 +55,19 @@ export default function ProductCard({ item }) {
     if (slug) window.location.href = `/catalogue/${slug}`;
   };
 
+  const handleWishlist = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsWishlisted(!isWishlisted);
+  };
+
+  const handleConsult = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const message = `Halo, saya tertarik dengan ${name}. Bisa konsultasi lebih lanjut?`;
+    window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(message)}`, "_blank");
+  };
+
   return (
     <Card className="group overflow-hidden rounded-2xl border border-gray-100 transition hover:shadow-md">
       {/* Gambar */}
@@ -63,6 +79,20 @@ export default function ProductCard({ item }) {
           loading="lazy"
           onError={(e) => { e.currentTarget.src = FALLBACK_SRC; }}
         />
+        
+        {/* Wishlist Button */}
+        <button
+          onClick={handleWishlist}
+          className="absolute top-3 right-3 p-2 rounded-full bg-white/90 hover:bg-white shadow-sm transition-all"
+          aria-label="Tambahkan ke wishlist"
+        >
+          <Heart
+            className={`h-4 w-4 transition-colors ${
+              isWishlisted ? "fill-red-500 text-red-500" : "text-gray-600"
+            }`}
+          />
+        </button>
+
         {/* Badges di atas gambar */}
         {badges.length > 0 && (
           <div className="absolute top-3 left-3 flex flex-wrap gap-1">
@@ -84,19 +114,19 @@ export default function ProductCard({ item }) {
           <h3 className="line-clamp-1 text-base font-semibold text-gray-900">{name}</h3>
           {leadWeeks !== null && (
             <Badge className="shrink-0 rounded-lg" variant="secondary">
-              {leadWeeks} minggu
+              {leadWeeks} mgg
             </Badge>
           )}
         </div>
 
-        {/* Meta */}
+        {/* Meta - Room specific */}
         <div className="mb-2 flex flex-wrap items-center gap-1 text-xs text-gray-600">
           {layout && <Badge variant="outline" className="rounded-md">{layout}</Badge>}
           {styles.slice(0, 2).map((s, i) => (
             <Badge key={i} variant="outline" className="rounded-md">{s}</Badge>
           ))}
           {finish && <Badge variant="outline" className="rounded-md">{finish}</Badge>}
-          {top    && <Badge variant="outline" className="rounded-md">Top: {top}</Badge>}
+          {top    && <Badge variant="outline" className="rounded-md">{top}</Badge>}
         </div>
 
         {/* Harga */}
@@ -105,9 +135,25 @@ export default function ProductCard({ item }) {
           : <div className="mb-3 text-sm text-gray-500">Harga menyesuaikan spesifikasi.</div>
         }
 
-        <Button className="w-full rounded-xl" onClick={handleView}>
-          Pelajari lebih lanjut
-        </Button>
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+          <Button 
+            className="flex-1 rounded-xl" 
+            onClick={handleView}
+            size="sm"
+          >
+            Detail
+            <ArrowRight className="ml-1 h-4 w-4" />
+          </Button>
+          <Button 
+            variant="outline"
+            className="rounded-xl"
+            onClick={handleConsult}
+            size="sm"
+          >
+            <MessageCircle className="h-4 w-4" />
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );

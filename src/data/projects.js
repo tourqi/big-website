@@ -11,8 +11,8 @@ export const PROJECTS = [
     cover:
       "/portfolio/kitchen-set-2.jpg",
     summary:
-      "Transformasi ruang tamu keluarga H yang semula gelap dan sesak menjadi living room bergaya Scandinavian Warm: terang, lapang, dan hangat untuk keluarga maupun tamu.",
-    tags: ["Living Room", "Scandinavian", "Furniture", "Lighting"],
+      "Kitchen set island minimalis untuk keluarga H di Bogor — island compact dengan finishing HPL matte dan top granite, memaksimalkan area masak di dapur kecil.",
+    tags: ["Kitchen Set", "Island", "Minimalist", "HPL"],
     images: [
       "https://images.unsplash.com/photo-1600585154206-0a64f0a2f48f?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1618213837799-8c0c1e6be1db?q=80&w=1600&auto=format&fit=crop",
@@ -22,7 +22,7 @@ export const PROJECTS = [
         id: "brief",
         heading: "Project Brief",
         body:
-          "Ruang tamu lama keluarga H dipenuhi furnitur besar peninggalan lama. Sofa tua dan lemari kayu besar menutup hampir setengah ruangan. Cat dinding kusam dan pencahayaan minim membuat ruang tamu terasa pengap. \n\nKeluarga H ingin ruang tamu yang **lebih terang, modern, dan nyaman** — sebuah ruang yang bisa dipakai untuk menerima tamu sekaligus tempat berkumpul keluarga setiap sore.",
+          "Dapur keluarga H di Bogor semula hanya memiliki kabinet dinding sederhana tanpa area persiapan memadai. Kebutuhan memasak meningkat seiring bertambahnya anggota keluarga.\n\nKeluarga H menginginkan **kitchen set dengan island** sebagai area persiapan sekaligus breakfast bar — tapi dapur berukuran kompak sehingga desain harus sangat efisien.",
         gallery: [
           "https://www.magnoliaadisentosa.com/uploads/news/2018/09/10/eca37ee0cb4d.jpg",
           "https://images.unsplash.com/photo-1747336754870-ca7b10cc75f5?q=80&w=1746&auto=format&fit=crop  ",
@@ -34,19 +34,19 @@ export const PROJECTS = [
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami mengusung konsep **Scandinavian Warm**: dominasi warna putih dan abu muda untuk mencerahkan ruangan, dengan aksen kayu alami yang menghadirkan rasa hangat. \n\nLangkah yang dilakukan:\n- **Mengganti furnitur besar** dengan sofa modular minimalis agar fleksibel saat ada tamu banyak.\n- **Membuka area jendela lebih lebar** dan menambahkan gorden tipis agar cahaya alami bisa masuk bebas.\n- **Menambahkan karpet tekstil lembut** untuk memberikan kenyamanan saat anak-anak duduk di lantai.\n- **Lighting layer**: lampu gantung minimalis dan standing lamp di pojok ruangan untuk ambience malam hari.\n\nHasil desain tetap sederhana, tapi mampu memberi kesan luas, bersih, dan ramah keluarga.",
+          "Kami merancang konsep **Compact Island Minimalist**: island 180 × 70 cm yang berfungsi ganda sebagai area prep dan breakfast bar.\n\nDetail desain:\n- **Kabinet bawah** plywood 18 mm finishing HPL matte walnut — warm dan tahan gores.\n- **Top granite** 20 mm untuk durabilitas dan kemudahan maintenance.\n- **Kabinet atas dihilangkan**, diganti rak terbuka kayu natural agar dapur terasa ringan.\n- **Pendant lighting** di atas island sebagai focal point sekaligus task lighting.\n- **Storage terintegrasi** di dalam island: laci soft-close dan rak bawah untuk panci.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Tantangan terbesar adalah keinginan klien untuk mempertahankan beberapa furnitur lama karena nilai sentimental, seperti meja kayu buatan kakek. Furnitur tersebut terlalu kontras dengan gaya modern. Solusinya, kami melakukan refinishing pada permukaan meja agar warnanya lebih netral, sehingga bisa berpadu dengan elemen baru.\n\nSelain itu, ruangan relatif sempit sehingga setiap sentimeter harus dimanfaatkan dengan bijak. Kami merancang rak dinding terbuka agar buku dan dekorasi tetap tertata tanpa menghabiskan ruang lantai. Proses pengerjaan memakan waktu 2 minggu dengan koordinasi ketat karena keluarga tetap tinggal di rumah.",
+          "Tantangan utama adalah memindahkan jalur pipa air dan listrik untuk mengakomodasi island di tengah dapur. Koordinasi dengan tukang pipa dan elektrik memakan waktu tambahan satu minggu.\n\nSelain itu, ukuran dapur yang terbatas menuntut presisi tinggi pada setiap pengukuran — selisih 1 cm saja bisa membuat sirkulasi tidak nyaman. Semua kabinet dibuat custom di workshop, lalu dirakit on-site. Proses keseluruhan selesai dalam 3 minggu.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Ruang tamu yang tadinya gelap kini berubah total: **lebih terang, lapang, dan hangat**. \n\nAnak-anak merasa nyaman bermain di area karpet, sementara orang tua merasa lega karena ruang tamu kini pantas dipakai menerima tamu kapan pun. Furnitur sentimental tetap hadir, tapi dalam tampilan baru yang menyatu dengan gaya modern. \n\nKlien menyampaikan kepuasan penuh: *“Sekarang setiap sore kami sekeluarga lebih sering duduk bersama di ruang tamu. Rasanya lebih hidup, lebih hangat, dan lebih menyenangkan.”*",
+          "Dapur keluarga H kini memiliki **island fungsional yang menjadi pusat aktivitas dapur**. Area persiapan yang sebelumnya tidak ada kini tersedia luas dan nyaman. Anak-anak bisa sarapan di island sambil menunggu berangkat sekolah.\n\nKlien menyampaikan kepuasan penuh: *\"Island-nya kecil tapi super fungsional. Masak jadi lebih enak, dan anak-anak suka sarapan di situ. Dapur kami benar-benar berubah!\"*",
       },
     ],
   },
@@ -63,35 +63,35 @@ export const PROJECTS = [
     cover:
       "/portfolio/bathroom-1.jpg",
     summary:
-      "Desain kantor Startup X dengan konsep Modern Minimalist: efisiensi ruang, pencahayaan maksimal, dan suasana kolaboratif.",
-    tags: ["Office", "Minimalist", "Workplace"],
+      "Renovasi kamar mandi lama menjadi bathroom minimalis modern — keramik besar, rain shower, dan vanity floating untuk kesan bersih dan lapang.",
+    tags: ["Bathroom", "Minimalist", "Residential"],
     images: [
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=1600&auto=format&fit=crop",
     ],
     sections: [
       {
         id: "brief",
         heading: "Project Brief",
         body:
-          "Startup X berkembang pesat dan membutuhkan kantor baru yang **efisien, kolaboratif, dan mencerminkan brand modern**. Tantangan: luas ruang terbatas tapi harus menampung 40+ karyawan dengan area kerja, meeting, dan lounge.",
+          "Kamar mandi utama sudah berusia lebih dari 15 tahun. Keramik kecil yang menguning, shower tiang lama yang sering bocor, dan vanity kayu yang mulai lapuk menjadi keluhan utama. Klien menginginkan bathroom yang **bersih, modern, dan low-maintenance** \u2014 ruang yang nyaman untuk digunakan sehari-hari.",
       },
       {
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami menerapkan konsep **Modern Minimalist**: meja open-space untuk kolaborasi, area meeting kecil semi-terbuka, dan lounge kasual dengan sofa modular. Warna dominan putih-abu dipadukan aksen warna brand pada dinding untuk memperkuat identitas. Pencahayaan alami dimaksimalkan lewat jendela kaca besar.",
+          "Kami mengusung konsep **Modern Minimalist Wet Room**: keramik format besar 60\u00d7120 cm warna abu muda untuk mengurangi nat dan mempermudah pembersihan. Vanity floating dari HPL anti-air agar lantai mudah dipel.\n\nLangkah utama:\n- **Rain shower built-in** menggantikan shower tiang lama.\n- **Cermin besar frameless** full-width di atas vanity.\n- **LED indirect lighting** di balik cermin untuk ambience hangat.\n- **Niche dinding** menggantikan rak tempel agar penyimpanan lebih rapi.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Tantangan terbesar adalah menjaga privasi dan akustik di ruang terbuka. Kami menambahkan panel akustik minimalis dan partisi kaca buram. Furnitur modular dipilih agar mudah disesuaikan saat jumlah karyawan bertambah. Proses pengerjaan dilakukan dalam waktu 6 minggu agar startup segera bisa pindah.",
+          "Tantangan utama adalah waterproofing lama yang sudah rusak. Seluruh lapisan harus dibongkar dan diaplikasi ulang sebelum keramik baru dipasang. Pipa air panas-dingin juga perlu diperbarui karena sudah korosi.\n\nUkuran bathroom yang kompak menuntut perencanaan presisi agar setiap elemen pas tanpa membuat ruang terasa sesak. Proses pengerjaan memakan waktu 3 minggu termasuk curing waterproofing.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Kantor kini terasa **lapang, terang, dan kolaboratif**. Tim merasa lebih produktif karena alur kerja lebih efisien. Identitas brand terlihat jelas di interior. *“Kantor baru ini bikin tim makin semangat kerja. Semua terasa lebih profesional tapi tetap hangat,”* ujar CEO Startup X.",
+          "Kamar mandi yang tadinya kusam kini menjadi **bathroom modern yang bersih dan lapang**. Keramik besar memberi kesan luas, rain shower memberikan kenyamanan ekstra, dan vanity floating mempermudah pembersihan.\n\nKlien sangat puas: *\"Sekarang kamar mandi terasa seperti di hotel. Bersih, modern, dan gampang dibersihin!\"*",
       },
     ],
   },
@@ -108,35 +108,35 @@ export const PROJECTS = [
     cover:
       "/portfolio/ruang-tv-1.jpg",
     summary:
-      "Desain kantor Startup X dengan konsep Modern Minimalist: efisiensi ruang, pencahayaan maksimal, dan suasana kolaboratif.",
-    tags: ["Office", "Minimalist", "Workplace"],
+      "Penataan ulang ruang TV keluarga bergaya Japandi — perpaduan minimalis Jepang dan kehangatan Scandinavian untuk ruang berkumpul yang tenang dan nyaman.",
+    tags: ["Living Room", "Japandi", "Residential", "Furniture"],
     images: [
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1600&auto=format&fit=crop",
     ],
     sections: [
       {
         id: "brief",
         heading: "Project Brief",
         body:
-          "Startup X berkembang pesat dan membutuhkan kantor baru yang **efisien, kolaboratif, dan mencerminkan brand modern**. Tantangan: luas ruang terbatas tapi harus menampung 40+ karyawan dengan area kerja, meeting, dan lounge.",
+          "Ruang TV keluarga dipenuhi furnitur yang tidak matching \u2014 sofa kulit lama, meja TV besar dari kayu gelap, dan rak buku memenuhi dinding. Ruangan terasa penuh dan berantakan. Klien menginginkan ruang TV yang **tenang, rapi, dan nyaman** untuk menonton film bersama atau sekadar bersantai sore hari.",
       },
       {
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami menerapkan konsep **Modern Minimalist**: meja open-space untuk kolaborasi, area meeting kecil semi-terbuka, dan lounge kasual dengan sofa modular. Warna dominan putih-abu dipadukan aksen warna brand pada dinding untuk memperkuat identitas. Pencahayaan alami dimaksimalkan lewat jendela kaca besar.",
+          "Kami mengadopsi gaya **Japandi**: perpaduan minimalis Jepang dan kehangatan Scandinavian. Palet warna netral dipadu aksen kayu natural.\n\nLangkah utama:\n- **TV wall panel** multipleks finishing veneer oak, terintegrasi kabinet bawah untuk menyembunyikan kabel.\n- **Sofa rendah** bergaya Jepang dengan kain linen netral.\n- **Karpet jute** untuk kehangatan tanpa mengurangi kesan bersih.\n- **Indirect lighting** di belakang TV panel dan lampu lantai di sudut ruangan.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Tantangan terbesar adalah menjaga privasi dan akustik di ruang terbuka. Kami menambahkan panel akustik minimalis dan partisi kaca buram. Furnitur modular dipilih agar mudah disesuaikan saat jumlah karyawan bertambah. Proses pengerjaan dilakukan dalam waktu 6 minggu agar startup segera bisa pindah.",
+          "Tantangan utama adalah TV wall panel custom yang harus mengakomodasi TV 65 inci, soundbar, set-top box, dan konsol game \u2014 semuanya dengan manajemen kabel tersembunyi. Kami merancang panel dengan bukaan belakang untuk ventilasi dan akses kabel.\n\nSofa lama masih bagus secara struktur, sehingga kami melakukan re-upholstery dengan kain linen krem agar sesuai tema Japandi. Proses selesai dalam 2 minggu.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Kantor kini terasa **lapang, terang, dan kolaboratif**. Tim merasa lebih produktif karena alur kerja lebih efisien. Identitas brand terlihat jelas di interior. *“Kantor baru ini bikin tim makin semangat kerja. Semua terasa lebih profesional tapi tetap hangat,”* ujar CEO Startup X.",
+          "Ruang TV yang tadinya berantakan kini menjadi **ruang berkumpul yang tenang dan hangat**. TV wall panel menyatukan semua perangkat dengan rapi, sofa yang di-reupholstery terasa baru, dan pencahayaan indirect menciptakan ambience sempurna.\n\nKlien menyampaikan: *\"Sekarang ruang TV jadi tempat favorit sekeluarga. Anak-anak suka duduk di karpet, kami di sofa \u2014 semua nyaman.\"*",
       },
     ],
   },
@@ -198,8 +198,8 @@ export const PROJECTS = [
     cover:
       "/portfolio/kitchen-set-4.jpg",
     summary:
-      "Renovasi kamar tidur utama Bapak T dari ruang gelap penuh furnitur menjadi kamar modern yang nyaman, minimalis, dan mendukung kualitas tidur.",
-    tags: ["Bedroom", "Lighting", "Furniture", "Minimalist"],
+      "Kitchen set layout L bergaya Scandinavian — kabinet putih-abu dengan handle minimalis, top quartz, dan storage efisien untuk dapur keluarga.",
+    tags: ["Kitchen Set", "L Layout", "Scandinavian", "HPL"],
     images: [
       "https://images.unsplash.com/photo-1595526114035-0f64b7f0b9a2?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -208,25 +208,25 @@ export const PROJECTS = [
         id: "brief",
         heading: "Project Brief",
         body:
-          "Kamar tidur utama Bapak T terasa pengap karena terlalu banyak furnitur lama: lemari besar, meja rias, dan tempat tidur kayu masif. Cat dinding warna gelap membuat suasana semakin suram. Klien ingin kamar yang **lebih nyaman, menenangkan, dan minimalis** sebagai tempat beristirahat setelah hari kerja panjang.",
+          "Dapur keluarga memiliki ruang berbentuk L yang belum dioptimalkan \u2014 hanya ada kabinet baris tunggal di satu sisi, sementara sisi lain kosong. Area persiapan sangat terbatas dan banyak ruang terbuang.\n\nKlien menginginkan **kitchen set L-layout** yang memanfaatkan kedua sisi dinding, dengan gaya Scandinavian yang terang dan bersih.",
       },
       {
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami menggunakan konsep **Modern Cozy**: warna netral, pencahayaan lembut, dan furnitur built-in hemat ruang. Headboard padded dipasang untuk kenyamanan, sementara wardrobe dibuat built-in dengan pintu sliding kaca buram agar kamar terlihat lebih luas. \n\nLampu tidur dipasang di sisi kanan-kiri untuk pencahayaan lembut, ditambah indirect lighting pada plafon agar atmosfer kamar lebih rileks.",
+          "Kami menerapkan gaya **Scandinavian Kitchen**: dominasi putih dan abu muda, handle minimalis profil aluminium, serta aksen kayu oak untuk kehangatan.\n\nDetail desain:\n- **Kabinet bawah full L** plywood 15 mm finishing HPL putih dove \u2014 bersih dan timeless.\n- **Kabinet atas satu sisi** dengan pintu lift-up untuk akses mudah.\n- **Top quartz** 20 mm warna putih carrara untuk tampilan seamless.\n- **Backsplash subway tile** putih untuk memperkuat Scandinavian character.\n- **Corner carousel** di area sudut L agar tidak ada dead space.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Proses renovasi menantang karena luas kamar terbatas. Setiap desain harus presisi agar tidak mengurangi sirkulasi. Kami melakukan pengukuran detail hingga milimeter, dan membuat wardrobe custom yang pas tanpa membuat ruangan sesak. \n\nFinishing dikerjakan dengan hati-hati agar tidak menimbulkan debu berlebihan, karena kamar tetap digunakan selama proses. Waktu pengerjaan selesai dalam 2,5 minggu.",
+          "Tantangan terbesar adalah sudut L yang tidak sepenuhnya siku (92\u00b0 alih-alih 90\u00b0). Kami membuat template khusus untuk countertop agar sambungan sudut presisi tanpa celah.\n\nInstalasi lift-up fitting pada kabinet atas membutuhkan kalibrasi hati-hati agar pintu terbuka dan menutup dengan smooth. Semua kabinet diproduksi custom di workshop. Proses on-site selesai dalam 2,5 minggu.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Hasil akhir membuat kamar terasa **lebih lapang, terang, dan nyaman**. Warna netral dan pencahayaan lembut memberi suasana menenangkan. Klien merasakan peningkatan kualitas tidur dan kini lebih betah berlama-lama di kamar.\n\n*“Kamar saya benar-benar berubah jadi tempat yang menenangkan. Begitu pulang kerja, rasanya langsung recharge,”* ujar Bapak T.",
+          "Dapur L kini terasa **terang, efisien, dan modern**. Kedua sisi dinding terpakai optimal, corner carousel menghilangkan dead space, dan gaya Scandinavian membuat dapur terasa luas meski ukurannya standar.\n\nKlien menyampaikan: *\"Dapur Scandinavian yang kami impikan akhirnya terwujud. Rapi, terang, dan masak jadi jauh lebih nyaman karena semua dalam jangkauan.\"*",
       },
     ],
   },
@@ -243,8 +243,8 @@ export const PROJECTS = [
     cover:
       "/portfolio/kitchen-set-3.jpg",
     summary:
-      "Renovasi menyeluruh rumah lama keluarga A menjadi hunian bergaya kontemporer: terang, modern, dan fungsional di setiap ruang.",
-    tags: ["Full Renovation", "Residential", "Contemporary"],
+      "Kitchen set island bergaya Japandi untuk Ibu R — perpaduan kayu natural dan earth tone untuk dapur yang hangat, fungsional, dan estetik.",
+    tags: ["Kitchen Set", "Island", "Japandi", "Custom"],
     images: [
       "https://images.unsplash.com/photo-1600210492493-094691112c1e?q=80&w=1600&auto=format&fit=crop",
     ],
@@ -253,70 +253,70 @@ export const PROJECTS = [
         id: "brief",
         heading: "Project Brief",
         body:
-          "Rumah keluarga A sudah berusia lebih dari 20 tahun. Tata ruang lama membuat rumah terasa gelap, sempit, dan tidak lagi sesuai dengan kebutuhan keluarga modern. Klien ingin rumah yang **lebih terbuka, terang, dan fungsional** di semua ruangan, tanpa kehilangan karakter asli bangunan.",
+          "Ibu R sedang menata rumah baru di Bogor dan menginginkan dapur impian bergaya Japandi. Ruang dapur cukup luas (4 \u00d7 5 m) sehingga memungkinkan layout island.\n\nKlien menginginkan **dapur yang hangat, natural, dan estetik** \u2014 tempat memasak sekaligus berkumpul keluarga.",
       },
       {
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami mengusung gaya **Contemporary Style**: clean lines, palet warna netral, dan material modern seperti HPL, kaca, serta batu alam. Dinding ruang tamu dibuka untuk menciptakan ruang lebih luas. Dapur dan ruang makan digabung agar keluarga bisa berinteraksi lebih intens. Kamar tidur diberi sentuhan minimalis agar lebih tenang, sementara ruang kerja dibuat terang dengan pencahayaan alami.",
+          "Kami mendesain konsep **Japandi Island Kitchen**: perpaduan wabi-sabi Jepang dan simplisitas Scandinavian.\n\nDetail desain:\n- **Island center** 240 \u00d7 90 cm dengan wastafel prep terintegrasi dan area duduk di satu sisi.\n- **Finishing veneer oak natural** pada kabinet bawah, dipadu HPL earth tone untuk kabinet atas.\n- **Top quartz** 20 mm warna warm grey \u2014 menyatu dengan palet Japandi.\n- **Open shelf** sebagian untuk display keramik dan tanaman, khas Japandi.\n- **Pendant light rotan** di atas island menambah karakter natural.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Tantangan utama adalah mengatur renovasi menyeluruh tanpa harus memindahkan keluarga. Solusinya, pekerjaan dibagi ke dalam zona: mulai dari area publik (ruang tamu & dapur), lalu kamar tidur, baru terakhir ruang servis. Setiap tahap ditutup rapat dengan pembatas debu agar penghuni tetap nyaman. Proses total memakan waktu hampir 3 bulan.",
+          "Tantangan utama adalah integrasi wastafel prep di island yang membutuhkan jalur pipa baru dari dinding ke tengah ruangan. Lantai harus dibuka untuk pemasangan drain dan supply line.\n\nVeneer oak natural harus diseleksi ketat agar grain dan warna konsisten di seluruh permukaan kabinet. Kami melakukan matching grain di workshop sebelum produksi. Proses keseluruhan memakan waktu 4 minggu.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Rumah lama kini terasa **seperti baru**: lebih terang, lapang, dan berkarakter modern. Setiap ruangan memiliki fungsi jelas namun tetap selaras secara visual. Keluarga A merasa rumah mereka lahir kembali dengan energi baru. *“Kami seperti pindah rumah tanpa benar-benar pindah. Rumah lama kami terasa lebih hidup dari sebelumnya,”* ujar klien.",
+          "Dapur Japandi Ibu R menjadi **highlight utama rumah baru**: hangat, natural, dan sangat fungsional. Island besar menjadi pusat aktivitas \u2014 dari persiapan masakan hingga tempat anak-anak mengerjakan PR sambil menemani ibu masak.\n\nIbu R menyampaikan: *\"Dapur ini persis seperti yang saya bayangkan. Hangat, cantik, dan enak dipake masak. Teman-teman yang berkunjung selalu terpukau!\"*",
       },
     ],
   },
 
   // 7. Loundry
   {
-    id: "loundry",
-    title: "Loundry — Modern Minimalist",
+    id: "laundry",
+    title: "Laundry — Modern Minimalist",
     category: "Residential",
-    client: "Bapak X",
+    client: "Bapak K",
     year: "2025",
     location: "Jakarta",
     scope: "Interior Build",
     cover:
       "/portfolio/loundry.jpg",
     summary:
-      "Desain kantor Startup X dengan konsep Modern Minimalist: efisiensi ruang, pencahayaan maksimal, dan suasana kolaboratif.",
-    tags: ["Office", "Minimalist", "Workplace"],
+      "Penataan ruang laundry modern — area cuci-jemur yang rapi, efisien, dan terintegrasi dengan kabinet penyimpanan custom.",
+    tags: ["Laundry", "Minimalist", "Residential", "Storage"],
     images: [
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=1600&auto=format&fit=crop",
     ],
     sections: [
       {
         id: "brief",
         heading: "Project Brief",
         body:
-          "Startup X berkembang pesat dan membutuhkan kantor baru yang **efisien, kolaboratif, dan mencerminkan brand modern**. Tantangan: luas ruang terbatas tapi harus menampung 40+ karyawan dengan area kerja, meeting, dan lounge.",
+          "Ruang laundry selama ini hanya berupa area kosong di belakang rumah \u2014 mesin cuci tanpa alas, jemuran lipat yang selalu berantakan, dan deterjen berserakan di lantai. Klien menginginkan ruang laundry yang **rapi, efisien, dan enak dilihat** layaknya bagian rumah yang terdesain baik.",
       },
       {
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami menerapkan konsep **Modern Minimalist**: meja open-space untuk kolaborasi, area meeting kecil semi-terbuka, dan lounge kasual dengan sofa modular. Warna dominan putih-abu dipadukan aksen warna brand pada dinding untuk memperkuat identitas. Pencahayaan alami dimaksimalkan lewat jendela kaca besar.",
+          "Kami menerapkan konsep **Utility Room Modern**: kabinet atas dan bawah mengelilingi mesin cuci-pengering, dengan countertop lipat di atas mesin.\n\nLangkah utama:\n- **Kabinet atas** untuk deterjen, pelembut, dan perlengkapan setrika.\n- **Countertop HPL** di atas mesin cuci sebagai area melipat pakaian.\n- **Rak jemuran dinding lipat** yang bisa disembunyikan saat tidak digunakan.\n- **Keramik anti-slip** dan floor drain untuk mengatasi air tumpah.\n- **Pencahayaan LED** terang di area kerja.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Tantangan terbesar adalah menjaga privasi dan akustik di ruang terbuka. Kami menambahkan panel akustik minimalis dan partisi kaca buram. Furnitur modular dipilih agar mudah disesuaikan saat jumlah karyawan bertambah. Proses pengerjaan dilakukan dalam waktu 6 minggu agar startup segera bisa pindah.",
+          "Tantangan utama adalah tata letak pipa dan drain yang sudah terpasang di posisi kurang ideal. Desain kabinet harus menyesuaikan jalur pipa tanpa mengganggu, sekaligus menambahkan floor drain baru.\n\nLuas ruang yang terbatas (2 \u00d7 2,5 m) membutuhkan pengukuran presisi untuk setiap modul kabinet. Semua kabinet dibuat custom agar pas tanpa sisa ruang terbuang. Proses selesai dalam 2 minggu.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Kantor kini terasa **lapang, terang, dan kolaboratif**. Tim merasa lebih produktif karena alur kerja lebih efisien. Identitas brand terlihat jelas di interior. *“Kantor baru ini bikin tim makin semangat kerja. Semua terasa lebih profesional tapi tetap hangat,”* ujar CEO Startup X.",
+          "Ruang laundry yang tadinya berantakan kini menjadi **area kerja yang rapi dan efisien**. Semua perlengkapan tersembunyi di dalam kabinet, countertop memudahkan proses lipat, dan rak jemuran lipat menghemat ruang.\n\nKlien menyampaikan: *\"Sekarang nyuci dan setrika jadi jauh lebih enak. Istri saya senang banget \u2014 semua rapi dan gampang dicari.\"*",
       },
     ],
   },
@@ -326,42 +326,42 @@ export const PROJECTS = [
     id: "wardrobe",
     title: "Wardrobe — Modern Minimalist",
     category: "Residential",
-    client: "Startup X",
+    client: "Ibu S",
     year: "2025",
     location: "Jakarta",
     scope: "Interior Build",
     cover:
       "/portfolio/kamar-4.jpg",
     summary:
-      "Desain kantor Startup X dengan konsep Modern Minimalist: efisiensi ruang, pencahayaan maksimal, dan suasana kolaboratif.",
-    tags: ["Office", "Minimalist", "Workplace"],
+      "Wardrobe built-in modern minimalis — lemari pakaian custom yang memaksimalkan ruang kamar tidur dengan storage terorganisir dan pintu sliding.",
+    tags: ["Wardrobe", "Minimalist", "Bedroom", "Custom"],
     images: [
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1558997519-83ea9252edf8?q=80&w=1600&auto=format&fit=crop",
     ],
     sections: [
       {
         id: "brief",
         heading: "Project Brief",
         body:
-          "Startup X berkembang pesat dan membutuhkan kantor baru yang **efisien, kolaboratif, dan mencerminkan brand modern**. Tantangan: luas ruang terbatas tapi harus menampung 40+ karyawan dengan area kerja, meeting, dan lounge.",
+          "Kamar tidur sangat sempit karena lemari pakaian berdiri besar memakan hampir sepertiga ruangan. Pakaian sering berantakan karena kapasitas lemari tidak mencukupi. Klien menginginkan **wardrobe built-in yang memaksimalkan dinding** agar kamar terasa lebih lapang dan pakaian tertata.",
       },
       {
         id: "approach",
         heading: "Design Approach",
         body:
-          "Kami menerapkan konsep **Modern Minimalist**: meja open-space untuk kolaborasi, area meeting kecil semi-terbuka, dan lounge kasual dengan sofa modular. Warna dominan putih-abu dipadukan aksen warna brand pada dinding untuk memperkuat identitas. Pencahayaan alami dimaksimalkan lewat jendela kaca besar.",
+          "Kami merancang **wardrobe built-in full-wall** dengan pintu sliding kaca buram agar kamar terlihat lebih luas.\n\nFitur utama:\n- **Zona gantung** panjang dan pendek untuk gaun, kemeja, celana, dan outerwear.\n- **Laci built-in** soft-close untuk pakaian dalam dan aksesoris.\n- **Rak sepatu** di bagian bawah dengan kemiringan agar mudah diambil.\n- **Area tas** di rak atas dengan pencahayaan LED strip.\n- **Cermin full-length** di bagian dalam pintu sliding.",
       },
       {
         id: "process",
         heading: "Process & Challenges",
         body:
-          "Tantangan terbesar adalah menjaga privasi dan akustik di ruang terbuka. Kami menambahkan panel akustik minimalis dan partisi kaca buram. Furnitur modular dipilih agar mudah disesuaikan saat jumlah karyawan bertambah. Proses pengerjaan dilakukan dalam waktu 6 minggu agar startup segera bisa pindah.",
+          "Tantangan utama adalah dinding kamar yang tidak rata \u2014 selisih hingga 2 cm di beberapa titik. Kami melakukan leveling dan shimming presisi agar wardrobe terpasang rapat tanpa celah.\n\nPintu sliding berukuran besar (2,4 m \u00d7 0,9 m per panel) membutuhkan rel heavy-duty dan pemasangan sangat presisi. Interior wardrobe dikerjakan custom di workshop lalu dirakit on-site. Proses selesai dalam 2 minggu.",
       },
       {
         id: "result",
         heading: "Results",
         body:
-          "Kantor kini terasa **lapang, terang, dan kolaboratif**. Tim merasa lebih produktif karena alur kerja lebih efisien. Identitas brand terlihat jelas di interior. *“Kantor baru ini bikin tim makin semangat kerja. Semua terasa lebih profesional tapi tetap hangat,”* ujar CEO Startup X.",
+          "Kamar yang tadinya sesak kini terasa **jauh lebih lapang dan terorganisir**. Wardrobe built-in menampung seluruh pakaian tanpa memakan ruang lantai. Pintu sliding kaca buram memberikan kesan modern.\n\nKlien menyampaikan: *\"Kamar saya jadi lebih rapi dan luas. Sekarang semua pakaian punya tempatnya masing-masing \u2014 pagi-pagi enggak panik lagi cari baju!\"*",
       },
     ],
   },
