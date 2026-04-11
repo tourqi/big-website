@@ -14,7 +14,7 @@ const ROOM_TYPES = [
 
 export default function RoomTabs({ activeRoom, onChangeRoom }) {
   return (
-    <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b py-3">
+    <div className="sticky top-16 z-40 bg-white/80 backdrop-blur-md border-b py-3">
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
           {ROOM_TYPES.map((room) => {

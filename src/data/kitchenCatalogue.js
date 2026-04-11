@@ -10,105 +10,236 @@ export const ROOM_CATEGORIES = [
     count: "12+ desain",
     styles: [
       {
-        id: "lr-modern",
-        name: "Modern",
-        image: "/catalogue/lr-modern.jpg",
+        id: "lr-minimalist",
+        name: "Minimalist",
+        image: "https://www.bhg.com/thmb/zFR26CNs97iO95jd5In118A-ViM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/MID_7009694_Shot_7_32acopy_preview-e1c1857231f949dd9978e2f6087d8228.jpg",
         description: "Desain minimalis dengan garis tegas dan warna netral.",
         components: [
-          { id: "comp-sofa-1", name: "Sofa", description: "Kursi utama ruang tamu", options: [
-            { id: "opt-sofa-fabric", name: "Fabric Sofa - Gray", description: "Sofa berbalut kain minimalis abu-abu", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
-            { id: "opt-sofa-leather", name: "Leather Sofa - Black", description: "Sofa kulit premium hitam modern", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5000000 },
-            { id: "opt-sofa-linen", name: "Linen Sofa - Cream", description: "Sofa linen natural tone minimalis", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+          { id: "lr-min-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "lr-min-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "lr-min-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "lr-min-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "lr-min-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
           ]},
-          { id: "comp-table-1", name: "Coffee Table", description: "Meja tamu pusat ruang", options: [
-            { id: "opt-table-wood", name: "Kayu Oak Natural", description: "Meja kayu oak dengan finishing natural", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2000000 },
-            { id: "opt-table-glass", name: "Glass & Metal", description: "Meja kaca dengan frame metal minimalis", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
-            { id: "opt-table-concrete", name: "Concrete Design", description: "Meja concrete industrial modern", image: "https://images.unsplash.com/photo-1586439773649-b2b9c3ca3d9a?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
+          { id: "lr-min-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "lr-min-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "lr-min-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "lr-min-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "lr-min-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
           ]},
-          { id: "comp-lighting-1", name: "Lighting", description: "Pencahayaan ruang tamu", options: [
-            { id: "opt-light-pendant", name: "Pendant Modern", description: "Lampu gantung minimalis geometri", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
-            { id: "opt-light-floor", name: "Floor Lamp", description: "Lampu berdiri modern dengan dimmer", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
-            { id: "opt-light-track", name: "Track Lighting", description: "Sistem track light untuk fleksibilitas", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1500000 },
+          { id: "lr-min-panel", name: "Feature Panel", description: "TV backdrop, wall panel (fluted/kisi), hidden LED", options: [
+            { id: "lr-min-pan-fluted", name: "Fluted Panel", description: "Wall panel fluted kayu natural minimalis", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 550000 },
+            { id: "lr-min-pan-tv", name: "TV Backdrop Panel", description: "Panel backdrop TV dengan hidden cable system", image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
+            { id: "lr-min-pan-led", name: "Hidden LED Panel", description: "Panel dinding dengan LED tersembunyi ambient", image: "https://images.unsplash.com/photo-1558882224-dda166ffe797?q=80&w=400&auto=format&fit=crop", pricePerMeter: 850000 },
+          ]},
+          { id: "lr-min-furniture", name: "Furniture", description: "Sofa, coffee table, side table, TV cabinet (loose/built-in)", options: [
+            { id: "lr-min-fur-sofa-fabric", name: "Fabric Sofa - Gray", description: "Sofa berbalut kain minimalis abu-abu", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "lr-min-fur-sofa-leather", name: "Leather Sofa - Black", description: "Sofa kulit premium hitam modern", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5000000 },
+            { id: "lr-min-fur-table", name: "Coffee Table Oak", description: "Meja kayu oak dengan finishing natural", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2000000 },
+            { id: "lr-min-fur-tv-cabinet", name: "TV Cabinet Built-in", description: "Kabinet TV built-in dengan storage tersembunyi", image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
+          ]},
+          { id: "lr-min-hardware", name: "Hardware & Accessories", description: "Engsel soft close, rel laci, bracket, LED, rak display", options: [
+            { id: "lr-min-hw-softclose", name: "Engsel Soft Close", description: "Set engsel soft close untuk semua pintu kabinet", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-min-hw-drawer", name: "Rel Laci Undermount", description: "Rel laci undermount 40kg silent system", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 350000 },
+            { id: "lr-min-hw-led", name: "LED Strip Display", description: "LED strip untuk rak display dan ambience", image: "https://images.unsplash.com/photo-1558882224-dda166ffe797?q=80&w=400&auto=format&fit=crop", pricePerMeter: 150000 },
+          ]},
+          { id: "lr-min-decor", name: "Decorative Elements", description: "Lukisan, tanaman, karpet, vas, aksesoris dekor", options: [
+            { id: "lr-min-dec-rug", name: "Karpet Minimalis", description: "Karpet warna netral polos atau geometri simple", image: "https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
+            { id: "lr-min-dec-plant", name: "Tanaman Indoor", description: "Tanaman hijau indoor pot keramik minimalis", image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-min-dec-art", name: "Wall Art Abstract", description: "Lukisan abstrak tone netral framed", image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=80&w=400&auto=format&fit=crop", pricePerMeter: 350000 },
+          ]},
+        ],
+      },
+      {
+        id: "lr-modern",
+        name: "Modern",
+        image: "https://storage.googleapis.com/arsitagx-master/img_medium/6890/6985/46089/photo-living-room-modern-living-room-desain-arsitek-oleh-gm-concept.png",
+        description: "Desain modern dengan garis tegas dan material kontemporer.",
+        components: [
+          { id: "lr-mod-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "lr-mod-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "lr-mod-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "lr-mod-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "lr-mod-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
+          ]},
+          { id: "lr-mod-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "lr-mod-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "lr-mod-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "lr-mod-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "lr-mod-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
+          ]},
+          { id: "lr-mod-panel", name: "Feature Panel", description: "TV backdrop, wall panel (fluted/kisi), hidden LED", options: [
+            { id: "lr-mod-pan-marble", name: "Marble Look Panel", description: "Panel dinding motif marble modern", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 900000 },
+            { id: "lr-mod-pan-kisi", name: "Panel Kisi Modern", description: "Panel kisi kayu geometri modern", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=400&auto=format&fit=crop", pricePerMeter: 650000 },
+            { id: "lr-mod-pan-tv-led", name: "TV Panel + LED", description: "Backdrop TV dengan LED strip built-in", image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=400&auto=format&fit=crop", pricePerMeter: 950000 },
+          ]},
+          { id: "lr-mod-furniture", name: "Furniture", description: "Sofa, coffee table, side table, TV cabinet (loose/built-in)", options: [
+            { id: "lr-mod-fur-sofa", name: "Modular Sofa", description: "Sofa modular konfigurasi fleksibel", image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4500000 },
+            { id: "lr-mod-fur-table-glass", name: "Glass Coffee Table", description: "Meja kaca tempered dengan frame metal", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
+            { id: "lr-mod-fur-tv-float", name: "Floating TV Console", description: "TV console floating wall mount modern", image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
+          ]},
+          { id: "lr-mod-hardware", name: "Hardware & Accessories", description: "Engsel soft close, rel laci, bracket, LED, rak display", options: [
+            { id: "lr-mod-hw-softclose", name: "Engsel Soft Close", description: "Engsel slow motion premium untuk pintu kabinet", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-mod-hw-bracket", name: "Bracket Floating", description: "Bracket concealed untuk rak floating", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 180000 },
+            { id: "lr-mod-hw-led", name: "LED Under Cabinet", description: "LED strip bawah kabinet cool white", image: "https://images.unsplash.com/photo-1558882224-dda166ffe797?q=80&w=400&auto=format&fit=crop", pricePerMeter: 150000 },
+          ]},
+          { id: "lr-mod-decor", name: "Decorative Elements", description: "Lukisan, tanaman, karpet, vas, aksesoris dekor", options: [
+            { id: "lr-mod-dec-rug", name: "Karpet Geometris", description: "Karpet pola geometri modern monochrome", image: "https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
+            { id: "lr-mod-dec-vas", name: "Vas Keramik Modern", description: "Vas keramik bentuk modern sculptural", image: "https://images.unsplash.com/photo-1581783898377-1c85bf937427?q=80&w=400&auto=format&fit=crop", pricePerMeter: 250000 },
           ]},
         ],
       },
       {
         id: "lr-klasik",
         name: "Klasik",
-        image: "/catalogue/lr-klasik.jpg",
+        image: "https://artfasad.com/wp-content/uploads/2023/09/wainscoting-ideas-for-living-room-6-1.jpg.webp",
         description: "Furniture elegan dengan detail tradisional yang timeless.",
         components: [
-          { id: "comp-sofa-2", name: "Sofa", description: "Kursi utama ruang tamu", options: [
-            { id: "opt-sofa-velvet", name: "Velvet Sofa - Wine", description: "Sofa beludru premium warna merah burgundy", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
-            { id: "opt-sofa-leather-classic", name: "Leather Classic - Brown", description: "Sofa kulit klasik warna cokelat", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 6000000 },
+          { id: "lr-kls-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "lr-kls-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "lr-kls-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "lr-kls-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "lr-kls-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
           ]},
-          { id: "comp-table-2", name: "Coffee Table", description: "Meja tamu pusat ruang", options: [
-            { id: "opt-table-mahogany", name: "Mahogany Solid", description: "Meja mahoni kayu solid dengan ukiran detail", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
-            { id: "opt-table-carved", name: "Carved Wood", description: "Meja kayu dengan detail ukiran tradisional", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+          { id: "lr-kls-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "lr-kls-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "lr-kls-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "lr-kls-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "lr-kls-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
           ]},
-          { id: "comp-lighting-2", name: "Lighting", description: "Pencahayaan ruang tamu", options: [
-            { id: "opt-light-crystal", name: "Crystal Chandelier", description: "Kristal mewah klasik dengan frame emas", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2000000 },
-            { id: "opt-light-brass", name: "Brass Sconce", description: "Lampu dinding brass dekoratif", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1500000 },
+          { id: "lr-kls-panel", name: "Feature Panel", description: "TV backdrop, wall panel (fluted/kisi), hidden LED", options: [
+            { id: "lr-kls-pan-wainscot", name: "Wainscoting Panel", description: "Panel wainscoting klasik dekoratif", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
+            { id: "lr-kls-pan-crown", name: "Crown Molding Backdrop", description: "Backdrop TV dengan crown molding detail", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 850000 },
+          ]},
+          { id: "lr-kls-furniture", name: "Furniture", description: "Sofa, coffee table, side table, TV cabinet (loose/built-in)", options: [
+            { id: "lr-kls-fur-sofa-velvet", name: "Velvet Sofa - Wine", description: "Sofa beludru premium warna burgundy", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
+            { id: "lr-kls-fur-table-mah", name: "Mahogany Table", description: "Meja mahoni solid dengan detail ukiran", image: "https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "lr-kls-fur-tv-classic", name: "TV Cabinet Klasik", description: "Kabinet TV klasik dengan glass door", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+          ]},
+          { id: "lr-kls-hardware", name: "Hardware & Accessories", description: "Engsel soft close, rel laci, bracket, LED, rak display", options: [
+            { id: "lr-kls-hw-brass", name: "Handle Brass Klasik", description: "Handle pintu kuningan gaya klasik", image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=400&auto=format&fit=crop", pricePerMeter: 300000 },
+            { id: "lr-kls-hw-hinge", name: "Engsel Dekoratif", description: "Engsel visible dekoratif brass finish", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 250000 },
+          ]},
+          { id: "lr-kls-decor", name: "Decorative Elements", description: "Lukisan, tanaman, karpet, vas, aksesoris dekor", options: [
+            { id: "lr-kls-dec-chandelier", name: "Crystal Chandelier", description: "Lampu kristal klasik mewah sebagai focal point", image: "https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2000000 },
+            { id: "lr-kls-dec-rug", name: "Persian Rug", description: "Karpet motif persia tradisional elegan", image: "https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
+            { id: "lr-kls-dec-frame", name: "Framed Oil Painting", description: "Lukisan cat minyak dengan bingkai ornamen", image: "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
           ]},
         ],
       },
       {
         id: "lr-industrial",
         name: "Industrial",
-        image: "/catalogue/lr-industrial.jpg",
+        image: "https://i.pinimg.com/736x/c5/0f/a3/c50fa3555a8a5ffa820a84fd663a195e.jpg",
         description: "Kombinasi logam, kayu, dan kursi berbahan kuat yang durabel.",
         components: [
-          { id: "comp-sofa-3", name: "Sofa", description: "Kursi utama ruang tamu", options: [
-            { id: "opt-sofa-canvas", name: "Canvas & Metal Frame", description: "Sofa kanvas dengan kerangka besi industrial", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
-            { id: "opt-sofa-leather-industrial", name: "Industrial Leather", description: "Kulit aged dengan gigi besi exposed", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4500000 },
+          { id: "lr-ind-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "lr-ind-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "lr-ind-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "lr-ind-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "lr-ind-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
           ]},
-          { id: "comp-table-3", name: "Coffee Table", description: "Meja tamu pusat ruang", options: [
-            { id: "opt-table-metal-wood", name: "Metal & Reclaimed Wood", description: "Meja besi dengan kayu bekas industrial", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
-            { id: "opt-table-steel", name: "Steel Plate Top", description: "Meja baja berkarat aesthetic industrial", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+          { id: "lr-ind-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "lr-ind-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "lr-ind-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "lr-ind-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "lr-ind-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
           ]},
-          { id: "comp-lighting-3", name: "Lighting", description: "Pencahayaan ruang tamu", options: [
-            { id: "opt-light-factory", name: "Factory Pendant", description: "Lampu pabrik vintage dengan shade logam", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1300000 },
-            { id: "opt-light-track-industrial", name: "Track Metal Beam", description: "Sistem track di exposed beam metal", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1800000 },
+          { id: "lr-ind-panel", name: "Feature Panel", description: "TV backdrop, wall panel (fluted/kisi), hidden LED", options: [
+            { id: "lr-ind-pan-brick", name: "Exposed Brick Panel", description: "Panel dinding bata ekspos industrial", image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
+            { id: "lr-ind-pan-metal-mesh", name: "Metal Mesh Panel", description: "Panel mesh logam dekoratif backdrop", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
+            { id: "lr-ind-pan-pipe", name: "Pipe Shelving System", description: "Rak display pipa besi industrial exposed", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
+          ]},
+          { id: "lr-ind-furniture", name: "Furniture", description: "Sofa, coffee table, side table, TV cabinet (loose/built-in)", options: [
+            { id: "lr-ind-fur-sofa-canvas", name: "Canvas & Metal Frame", description: "Sofa kanvas dengan kerangka besi industrial", image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+            { id: "lr-ind-fur-table-metal", name: "Metal & Reclaimed Wood", description: "Meja besi dengan kayu bekas industrial", image: "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "lr-ind-fur-tv-open", name: "Open Shelf TV Rack", description: "Rak TV terbuka besi + kayu tanpa pintu", image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2800000 },
+          ]},
+          { id: "lr-ind-hardware", name: "Hardware & Accessories", description: "Engsel soft close, rel laci, bracket, LED, rak display", options: [
+            { id: "lr-ind-hw-pipe-bracket", name: "Pipe Bracket", description: "Bracket rak dari pipa besi industrial", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-ind-hw-cage-lamp", name: "Cage Lamp Mount", description: "Fitting lampu cage wire industrial", image: "https://images.unsplash.com/photo-1558882224-dda166ffe797?q=80&w=400&auto=format&fit=crop", pricePerMeter: 180000 },
+          ]},
+          { id: "lr-ind-decor", name: "Decorative Elements", description: "Lukisan, tanaman, karpet, vas, aksesoris dekor", options: [
+            { id: "lr-ind-dec-factory-lamp", name: "Factory Pendant", description: "Lampu gantung pabrik vintage metal shade", image: "https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1300000 },
+            { id: "lr-ind-dec-rug", name: "Karpet Washed Out", description: "Karpet washed-out tone netral industrial", image: "https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
+            { id: "lr-ind-dec-clock", name: "Metal Clock Besar", description: "Jam dinding metal industrial oversized", image: "https://images.unsplash.com/photo-1581783898377-1c85bf937427?q=80&w=400&auto=format&fit=crop", pricePerMeter: 350000 },
           ]},
         ],
       },
       {
         id: "lr-scandinavian",
         name: "Scandinavian",
-        image: "/catalogue/lr-scandinavian.jpg",
+        image: "https://artfasad.com/wp-content/uploads/2024/01/scandi-style-living-room-6.jpg.webp",
         description: "Terang dan simpel dengan furniture fungsional dan cozy.",
         components: [
-          { id: "comp-sofa-4", name: "Sofa", description: "Kursi utama ruang tamu", options: [
-            { id: "opt-sofa-linen-scandi", name: "Linen Natural", description: "Sofa linen putih cream Skandinavia", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3800000 },
-            { id: "opt-sofa-wool", name: "Wool Fabric - Light", description: "Sofa wool warna terang hangat", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4200000 },
+          { id: "lr-scn-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "lr-scn-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "lr-scn-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "lr-scn-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "lr-scn-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
           ]},
-          { id: "comp-table-4", name: "Coffee Table", description: "Meja tamu pusat ruang", options: [
-            { id: "opt-table-birch", name: "Birch Wood Light", description: "Meja birch kayu muda Skandinavia", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2200000 },
-            { id: "opt-table-white-oak", name: "White Oak", description: "Meja oak putih minimalis terang", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
+          { id: "lr-scn-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "lr-scn-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "lr-scn-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "lr-scn-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "lr-scn-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
           ]},
-          { id: "comp-lighting-4", name: "Lighting", description: "Pencahayaan ruang tamu", options: [
-            { id: "opt-light-paper", name: "Paper Shade Pendant", description: "Lampu kertas soft glow Skandinavia", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 900000 },
-            { id: "opt-light-wood-natural", name: "Wood Natural Light", description: "Lampu natural wood warna terang", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1100000 },
+          { id: "lr-scn-panel", name: "Feature Panel", description: "TV backdrop, wall panel (fluted/kisi), hidden LED", options: [
+            { id: "lr-scn-pan-slat", name: "Wood Slat Panel", description: "Panel slat kayu natural terang Skandinavia", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 550000 },
+            { id: "lr-scn-pan-simple", name: "Simple TV Niche", description: "Niche dinding sederhana untuk TV mount", image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=400&auto=format&fit=crop", pricePerMeter: 450000 },
+          ]},
+          { id: "lr-scn-furniture", name: "Furniture", description: "Sofa, coffee table, side table, TV cabinet (loose/built-in)", options: [
+            { id: "lr-scn-fur-sofa-linen", name: "Linen Sofa Cream", description: "Sofa linen warna cream hangat Skandinavia", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3800000 },
+            { id: "lr-scn-fur-table-birch", name: "Birch Coffee Table", description: "Meja birch kayu muda ringan simpel", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2200000 },
+            { id: "lr-scn-fur-tv-oak", name: "TV Stand White Oak", description: "Rak TV kayu putih oak legs natural", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
+          ]},
+          { id: "lr-scn-hardware", name: "Hardware & Accessories", description: "Engsel soft close, rel laci, bracket, LED, rak display", options: [
+            { id: "lr-scn-hw-softclose", name: "Engsel Soft Close", description: "Engsel soft close tone putih / nickel", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-scn-hw-shelf", name: "Floating Shelf Bracket", description: "Bracket tersembunyi untuk rak floating", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 150000 },
+          ]},
+          { id: "lr-scn-decor", name: "Decorative Elements", description: "Lukisan, tanaman, karpet, vas, aksesoris dekor", options: [
+            { id: "lr-scn-dec-paper-lamp", name: "Paper Shade Pendant", description: "Lampu kertas soft glow Skandinavia", image: "https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?q=80&w=400&auto=format&fit=crop", pricePerMeter: 900000 },
+            { id: "lr-scn-dec-knit", name: "Knitted Throw", description: "Selimut rajut cozy warna netral", image: "https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=400&auto=format&fit=crop", pricePerMeter: 300000 },
+            { id: "lr-scn-dec-plant", name: "Hanging Planter", description: "Tanaman gantung macrame natural", image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
           ]},
         ],
       },
       {
-        id: "lr-cozy",
-        name: "Cozy",
-        image: "/catalogue/lr-cozy.jpg",
+        id: "lr-japandi",
+        name: "Japandi",
+        image: "https://roomofinspo.com/wp-content/uploads/RoI_Japandi-Living-Room_13_TV-Wall_11.webp",
         description: "Hangat dan nyaman dengan tekstur lembut dan pencahayaan ambient.",
         components: [
-          { id: "comp-sofa-5", name: "Sofa", description: "Kursi utama ruang tamu", options: [
-            { id: "opt-sofa-fabric-warm", name: "Fabric Warm Tone", description: "Sofa kain warna hangat taupe", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3600000 },
-            { id: "opt-sofa-boucle", name: "Bouclé Textured", description: "Sofa tekstur bouclé creamy cozy", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4300000 },
+          { id: "lr-jpn-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "lr-jpn-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "lr-jpn-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "lr-jpn-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "lr-jpn-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
           ]},
-          { id: "comp-table-5", name: "Coffee Table", description: "Meja tamu pusat ruang", options: [
-            { id: "opt-table-walnut", name: "Walnut Warm", description: "Meja walnut warna hangat natural", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2600000 },
-            { id: "opt-table-rattan", name: "Rattan Base", description: "Meja wooden top dengan alas rattan", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2800000 },
+          { id: "lr-jpn-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "lr-jpn-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "lr-jpn-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "lr-jpn-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "lr-jpn-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
           ]},
-          { id: "comp-lighting-5", name: "Lighting", description: "Pencahayaan ruang tamu", options: [
-            { id: "opt-light-warm-dimmable", name: "Warm Dimmable", description: "Lampu warm 2700K dengan dimmer", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1400000 },
-            { id: "opt-light-fabric-shade", name: "Fabric Shade Warm", description: "Lampu shade kain warna hangat", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1600000 },
+          { id: "lr-jpn-panel", name: "Feature Panel", description: "TV backdrop, wall panel (fluted/kisi), hidden LED", options: [
+            { id: "lr-jpn-pan-shoji", name: "Shoji-inspired Panel", description: "Panel dinding bergaya shoji Jepang", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=400&auto=format&fit=crop", pricePerMeter: 650000 },
+            { id: "lr-jpn-pan-tatami", name: "Tatami Accent Wall", description: "Aksen dinding motif tatami natural", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
+            { id: "lr-jpn-pan-fluted", name: "Fluted Wood Warm", description: "Fluted panel kayu warm tone japandi", image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
+          ]},
+          { id: "lr-jpn-furniture", name: "Furniture", description: "Sofa, coffee table, side table, TV cabinet (loose/built-in)", options: [
+            { id: "lr-jpn-fur-sofa-boucle", name: "Bouclé Sofa", description: "Sofa tekstur bouclé creamy japandi", image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4300000 },
+            { id: "lr-jpn-fur-table-walnut", name: "Walnut Low Table", description: "Meja walnut rendah gaya Jepang", image: "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2600000 },
+            { id: "lr-jpn-fur-tv-low", name: "Low TV Cabinet", description: "Kabinet TV rendah simpel kayu natural", image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2800000 },
+          ]},
+          { id: "lr-jpn-hardware", name: "Hardware & Accessories", description: "Engsel soft close, rel laci, bracket, LED, rak display", options: [
+            { id: "lr-jpn-hw-softclose", name: "Engsel Soft Close", description: "Engsel soft close warna natural brass", image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-jpn-hw-pull", name: "Minimal Pull Handle", description: "Handle tarikan simpel recessed japandi", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 120000 },
+          ]},
+          { id: "lr-jpn-decor", name: "Decorative Elements", description: "Lukisan, tanaman, karpet, vas, aksesoris dekor", options: [
+            { id: "lr-jpn-dec-warm-lamp", name: "Warm Dimmable Lamp", description: "Lampu warm 2700K dengan dimmer cozy", image: "https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1400000 },
+            { id: "lr-jpn-dec-rattan", name: "Rattan Basket", description: "Keranjang rattan natural dekoratif", image: "https://images.unsplash.com/photo-1581783898377-1c85bf937427?q=80&w=400&auto=format&fit=crop", pricePerMeter: 200000 },
+            { id: "lr-jpn-dec-bonsai", name: "Bonsai / Kokedama", description: "Tanaman bonsai atau kokedama Jepang", image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=400&auto=format&fit=crop", pricePerMeter: 350000 },
           ]},
         ],
       },
@@ -124,100 +255,160 @@ export const ROOM_CATEGORIES = [
       {
         id: "br-minimalist",
         name: "Minimalist",
-        image: "/catalogue/br-minimalist.jpg",
+        image: "https://images.pexels.com/photos/7045354/pexels-photo-7045354.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Ruang tidur gersang dengan furniture essential dan warna tenang.",
         components: [
+          { id: "br-min-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "br-min-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "br-min-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "br-min-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "br-min-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
+          ]},
+          { id: "br-min-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "br-min-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "br-min-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "br-min-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "br-min-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
+          ]},
           { id: "comp-bed-1", name: "Bed Frame", description: "Rangka tempat tidur", options: [
-            { id: "opt-bed-platform", name: "Platform Bed Low", description: "Ranjang platform minimalis tanpa headboard", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
-            { id: "opt-bed-wooden", name: "Wooden Frame", description: "Ranjang kayu natural minimalis", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "opt-bed-platform", name: "Platform Bed Low", description: "Ranjang platform minimalis tanpa headboard", image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
+            { id: "opt-bed-wooden", name: "Wooden Frame", description: "Ranjang kayu natural minimalis", image: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
           ]},
           { id: "comp-mattress-1", name: "Mattress", description: "Kasur pembaringan", options: [
-            { id: "opt-mattress-latex", name: "Natural Latex", description: "Kasur latex organik memory foam", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
-            { id: "opt-mattress-spring", name: "Pocket Spring", description: "Kasur spring koil pocket system", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
+            { id: "opt-mattress-latex", name: "Natural Latex", description: "Kasur latex organik memory foam", image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "opt-mattress-spring", name: "Pocket Spring", description: "Kasur spring koil pocket system", image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
           ]},
           { id: "comp-headboard-1", name: "Headboard", description: "Panel kepala ranjang", options: [
-            { id: "opt-headboard-minimal", name: "Upholstered Gray", description: "Headboard minimalis kain abu-abu", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
-            { id: "opt-headboard-none", name: "Wall Mounted", description: "Headboard wall panel minimalis", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1500000 },
+            { id: "opt-headboard-minimal", name: "Upholstered Gray", description: "Headboard minimalis kain abu-abu", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
+            { id: "opt-headboard-none", name: "Wall Mounted", description: "Headboard wall panel minimalis", image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1500000 },
           ]},
         ],
       },
       {
         id: "br-luxury",
         name: "Luxury",
-        image: "/catalogue/br-luxury.jpg",
+        image: "https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Desain mewah dengan material premium dan dekorasi eksklusif.",
         components: [
+          { id: "br-lux-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "br-lux-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "br-lux-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "br-lux-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "br-lux-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
+          ]},
+          { id: "br-lux-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "br-lux-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "br-lux-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "br-lux-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "br-lux-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
+          ]},
           { id: "comp-bed-2", name: "Bed Frame", description: "Rangka tempat tidur", options: [
-            { id: "opt-bed-upholstered", name: "Upholstered Luxury", description: "Ranjang berlapis kain premium velvet", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
-            { id: "opt-bed-leather", name: "Leather Contemporary", description: "Ranjang leather premium warna dark", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 6500000 },
+            { id: "opt-bed-upholstered", name: "Upholstered Luxury", description: "Ranjang berlapis kain premium velvet", image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
+            { id: "opt-bed-leather", name: "Leather Contemporary", description: "Ranjang leather premium warna dark", image: "https://images.unsplash.com/photo-1505693314120-0d443867891c?q=80&w=400&auto=format&fit=crop", pricePerMeter: 6500000 },
           ]},
           { id: "comp-mattress-2", name: "Mattress", description: "Kasur premium", options: [
-            { id: "opt-mattress-hybrid", name: "Hybrid Premium", description: "Kasur hybrid latex + spring mewah", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5000000 },
-            { id: "opt-mattress-memory", name: "Memory Foam Gel", description: "Kasur memory foam gel cooling", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4500000 },
+            { id: "opt-mattress-hybrid", name: "Hybrid Premium", description: "Kasur hybrid latex + spring mewah", image: "https://images.unsplash.com/photo-1592229505726-ca121723b8ef?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5000000 },
+            { id: "opt-mattress-memory", name: "Memory Foam Gel", description: "Kasur memory foam gel cooling", image: "https://images.unsplash.com/photo-1631049421450-348ccd7f8949?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4500000 },
           ]},
           { id: "comp-headboard-2", name: "Headboard", description: "Panel kepala ranjang", options: [
-            { id: "opt-headboard-tall", name: "Tall Tufted", description: "Headboard tinggi dengan bantalan tufted", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
-            { id: "opt-headboard-carved", name: "Carved Wood", description: "Headboard kayu carved dengan dekorasi", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
+            { id: "opt-headboard-tall", name: "Tall Tufted", description: "Headboard tinggi dengan bantalan tufted", image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2500000 },
+            { id: "opt-headboard-carved", name: "Carved Wood", description: "Headboard kayu carved dengan dekorasi", image: "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
           ]},
         ],
       },
       {
         id: "br-japandi",
         name: "Japandi",
-        image: "/catalogue/br-japandi.jpg",
+        image: "https://images.pexels.com/photos/8251670/pexels-photo-8251670.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Gabungan gaya Jepang dan Skandinavia yang serene dan balanced.",
         components: [
+          { id: "br-jpn-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "br-jpn-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "br-jpn-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "br-jpn-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "br-jpn-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
+          ]},
+          { id: "br-jpn-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "br-jpn-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "br-jpn-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "br-jpn-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "br-jpn-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
+          ]},
           { id: "comp-bed-3", name: "Bed Frame", description: "Rangka tempat tidur", options: [
-            { id: "opt-bed-low-natural", name: "Low Natural Wood", description: "Ranjang rendah kayu natural japandi", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3800000 },
-            { id: "opt-bed-tatami", name: "Tatami Style", description: "Ranjang gaya tatami jepang minimalis", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3200000 },
+            { id: "opt-bed-low-natural", name: "Low Natural Wood", description: "Ranjang rendah kayu natural japandi", image: "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3800000 },
+            { id: "opt-bed-tatami", name: "Tatami Style", description: "Ranjang gaya tatami jepang minimalis", image: "https://images.pexels.com/photos/6962851/pexels-photo-6962851.jpeg?auto=compress&cs=tinysrgb&w=400", pricePerMeter: 3200000 },
           ]},
           { id: "comp-mattress-3", name: "Mattress", description: "Kasur", options: [
-            { id: "opt-mattress-natural-fiber", name: "Natural Fiber", description: "Kasur serat alami breathable", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2800000 },
-            { id: "opt-mattress-futon", name: "Futon Traditional", description: "Kasur futon tradisional jepang", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2200000 },
+            { id: "opt-mattress-natural-fiber", name: "Natural Fiber", description: "Kasur serat alami breathable", image: "https://images.unsplash.com/photo-1629140727571-9b5c6f6267b4?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2800000 },
+            { id: "opt-mattress-futon", name: "Futon Traditional", description: "Kasur futon tradisional jepang", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2200000 },
           ]},
           { id: "comp-headboard-3", name: "Headboard", description: "Panel kepala ranjang", options: [
-            { id: "opt-headboard-wooden-slat", name: "Wooden Slat", description: "Headboard kayu slat natural japandi", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1600000 },
-            { id: "opt-headboard-fabric-natural", name: "Linen Natural", description: "Headboard linen warna alami", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1800000 },
+            { id: "opt-headboard-wooden-slat", name: "Wooden Slat", description: "Headboard kayu slat natural japandi", image: "https://images.pexels.com/photos/8251591/pexels-photo-8251591.jpeg?auto=compress&cs=tinysrgb&w=400", pricePerMeter: 1600000 },
+            { id: "opt-headboard-fabric-natural", name: "Linen Natural", description: "Headboard linen warna alami", image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1800000 },
           ]},
         ],
       },
       {
         id: "br-modern",
         name: "Modern",
-        image: "/catalogue/br-modern.jpg",
+        image: "https://images.pexels.com/photos/34754003/pexels-photo-34754003.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: "Tempat tidur platform dengan pencahayaan terintegrasi yang futuristik.",
         components: [
+          { id: "br-mod-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "br-mod-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "br-mod-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "br-mod-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "br-mod-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
+          ]},
+          { id: "br-mod-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "br-mod-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "br-mod-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "br-mod-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "br-mod-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
+          ]},
           { id: "comp-bed-4", name: "Bed Frame", description: "Rangka tempat tidur", options: [
-            { id: "opt-bed-platform-tech", name: "Platform Tech Bed", description: "Ranjang platform dengan USB charging", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5200000 },
-            { id: "opt-bed-adjustable", name: "Adjustable Electric", description: "Ranjang elektrik dapat disesuaikan", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 7000000 },
+            { id: "opt-bed-platform-tech", name: "Platform Tech Bed", description: "Ranjang platform dengan USB charging", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5200000 },
+            { id: "opt-bed-adjustable", name: "Adjustable Electric", description: "Ranjang elektrik dapat disesuaikan", image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=400&auto=format&fit=crop", pricePerMeter: 7000000 },
           ]},
           { id: "comp-mattress-4", name: "Mattress", description: "Kasur premium", options: [
-            { id: "opt-mattress-smart", name: "Smart Cooling", description: "Kasur gel cooling dengan teknologi", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
-            { id: "opt-mattress-adjustable", name: "Memory Adjustable", description: "Kasur memory foam firm regulable", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4800000 },
+            { id: "opt-mattress-smart", name: "Smart Cooling", description: "Kasur gel cooling dengan teknologi", image: "https://images.unsplash.com/photo-1631049552057-403cdb8f0658?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
+            { id: "opt-mattress-adjustable", name: "Memory Adjustable", description: "Kasur memory foam firm regulable", image: "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4800000 },
           ]},
           { id: "comp-headboard-4", name: "Headboard", description: "Panel kepala ranjang", options: [
-            { id: "opt-headboard-modern-lit", name: "Integrated Lighting", description: "Headboard built-in lampu ambient", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2800000 },
-            { id: "opt-headboard-smart-panel", name: "Smart Panel", description: "Headboard panel kontrol pintar", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "opt-headboard-modern-lit", name: "Integrated Lighting", description: "Headboard built-in lampu ambient", image: "https://images.pexels.com/photos/12277279/pexels-photo-12277279.jpeg?auto=compress&cs=tinysrgb&w=400", pricePerMeter: 2800000 },
+            { id: "opt-headboard-smart-panel", name: "Smart Panel", description: "Headboard panel kontrol pintar", image: "https://images.unsplash.com/photo-1618219944342-824e40a13285?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
           ]},
         ],
       },
       {
         id: "br-bohemian",
         name: "Bohemian",
-        image: "/catalogue/br-bohemian.jpg",
+        image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=800&auto=format&fit=crop",
         description: "Mix pola, tekstur, dan warna yang eclectic dan artistik.",
         components: [
+          { id: "br-boh-structure", name: "Structure (Rangka)", description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board", options: [
+            { id: "br-boh-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+            { id: "br-boh-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+            { id: "br-boh-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+            { id: "br-boh-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
+          ]},
+          { id: "br-boh-finishing", name: "Finishing (Surface)", description: "HPL, Duco, Veneer, Tacosheet", options: [
+            { id: "br-boh-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+            { id: "br-boh-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+            { id: "br-boh-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+            { id: "br-boh-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
+          ]},
           { id: "comp-bed-5", name: "Bed Frame", description: "Rangka tempat tidur", options: [
-            { id: "opt-bed-macrame", name: "Macramé Style", description: "Ranjang dengan detail macramé boho", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3600000 },
-            { id: "opt-bed-rattan", name: "Rattan Woven", description: "Ranjang rattan woven bohemian", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3200000 },
+            { id: "opt-bed-macrame", name: "Macramé Style", description: "Ranjang dengan detail macramé boho", image: "https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3600000 },
+            { id: "opt-bed-rattan", name: "Rattan Woven", description: "Ranjang rattan woven bohemian", image: "https://images.unsplash.com/photo-1595514535215-95fc6629a5d0?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3200000 },
           ]},
           { id: "comp-mattress-5", name: "Mattress", description: "Kasur", options: [
-            { id: "opt-mattress-organic", name: "Organic Cotton", description: "Kasur cotton organik breathable", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
-            { id: "opt-mattress-natural", name: "Natural Latex", description: "Kasur latex organik eco-friendly", image: "https://images.unsplash.com/photo-1566662834212-1fdf5437e153?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "opt-mattress-organic", name: "Organic Cotton", description: "Kasur cotton organik breathable", image: "https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3000000 },
+            { id: "opt-mattress-natural", name: "Natural Latex", description: "Kasur latex organik eco-friendly", image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
           ]},
           { id: "comp-headboard-5", name: "Headboard", description: "Panel kepala ranjang", options: [
-            { id: "opt-headboard-macrame-wall", name: "Macramé Wall", description: "Wall hanging macramé bohemian", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1400000 },
-            { id: "opt-headboard-textile", name: "Boho Textile", description: "Headboard textile tapestry colorful", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1600000 },
+            { id: "opt-headboard-macrame-wall", name: "Macramé Wall", description: "Wall hanging macramé bohemian", image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1400000 },
+            { id: "opt-headboard-textile", name: "Boho Textile", description: "Headboard textile tapestry colorful", image: "https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1600000 },
           ]},
         ],
       },
@@ -233,100 +424,100 @@ export const ROOM_CATEGORIES = [
       {
         id: "dr-formal",
         name: "Formal",
-        image: "/catalogue/dr-formal.jpg",
+        image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=800&auto=format&fit=crop",
         description: "Meja makan besar dengan kursi berkualitas tinggi untuk acara formal.",
         components: [
           { id: "comp-dining-table-1", name: "Dining Table", description: "Meja makan utama", options: [
-            { id: "opt-table-mahogany-formal", name: "Mahogany Formal", description: "Meja mahoni solid ukiran formal", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 6000000 },
-            { id: "opt-table-marble-formal", name: "Marble Top", description: "Meja dengan top marmer putih elegan", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 8000000 },
+            { id: "opt-table-mahogany-formal", name: "Mahogany Formal", description: "Meja mahoni solid ukiran formal", image: "https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?q=80&w=400&auto=format&fit=crop", pricePerMeter: 6000000 },
+            { id: "opt-table-marble-formal", name: "Marble Top", description: "Meja dengan top marmer putih elegan", image: "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 8000000 },
           ]},
           { id: "comp-dining-chairs-1", name: "Dining Chairs", description: "Kursi makan", options: [
-            { id: "opt-chair-upholstered-formal", name: "Velvet Upholstered", description: "Kursi beludru warna burgundy formal", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1800000 },
-            { id: "opt-chair-leather-formal", name: "Leather Premium", description: "Kursi kulit hitam dengan nail detail", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2200000 },
+            { id: "opt-chair-upholstered-formal", name: "Velvet Upholstered", description: "Kursi beludru warna burgundy formal", image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1800000 },
+            { id: "opt-chair-leather-formal", name: "Leather Premium", description: "Kursi kulit hitam dengan nail detail", image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=400&auto=format&fit=crop", pricePerMeter: 2200000 },
           ]},
           { id: "comp-hardware-1", name: "Hardware", description: "Aksesoris", options: [
-            { id: "opt-hw-brass", name: "Brass Handles", description: "Handle brass polished mewah", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
-            { id: "opt-hw-crystal", name: "Crystal Pulls", description: "Pulls kristal dekoratif", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1000000 },
+            { id: "opt-hw-brass", name: "Brass Handles", description: "Handle brass polished mewah", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
+            { id: "opt-hw-crystal", name: "Crystal Pulls", description: "Pulls kristal dekoratif", image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1000000 },
           ]},
         ],
       },
       {
         id: "dr-casual",
         name: "Casual",
-        image: "/catalogue/dr-casual.jpg",
+        image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=800&auto=format&fit=crop",
         description: "Suasana santai dengan meja wooden dan kursi yang nyaman.",
         components: [
           { id: "comp-dining-table-2", name: "Dining Table", description: "Meja makan utama", options: [
-            { id: "opt-table-wood-casual", name: "Oak Wood Natural", description: "Meja oak kayu natural casual", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
-            { id: "opt-table-teak", name: "Teak Reclaimed", description: "Meja teak bekas casual rustic", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+            { id: "opt-table-wood-casual", name: "Oak Wood Natural", description: "Meja oak kayu natural casual", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "opt-table-teak", name: "Teak Reclaimed", description: "Meja teak bekas casual rustic", image: "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
           ]},
           { id: "comp-dining-chairs-2", name: "Dining Chairs", description: "Kursi makan", options: [
-            { id: "opt-chair-wood-casual", name: "Wooden Simple", description: "Kursi kayu sederhana casual", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
-            { id: "opt-chair-fabric-casual", name: "Fabric Cushion", description: "Kursi kain empuk casual", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1500000 },
+            { id: "opt-chair-wood-casual", name: "Wooden Simple", description: "Kursi kayu sederhana casual", image: "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
+            { id: "opt-chair-fabric-casual", name: "Fabric Cushion", description: "Kursi kain empuk casual", image: "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1500000 },
           ]},
           { id: "comp-hardware-2", name: "Hardware", description: "Aksesoris", options: [
-            { id: "opt-hw-wood", name: "Wood Details", description: "Aksesoris kayu natural", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 400000 },
-            { id: "opt-hw-metal-simple", name: "Simple Metal", description: "Handle metal sederhana", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
+            { id: "opt-hw-wood", name: "Wood Details", description: "Aksesoris kayu natural", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 400000 },
+            { id: "opt-hw-metal-simple", name: "Simple Metal", description: "Handle metal sederhana", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
           ]},
         ],
       },
       {
         id: "dr-modern",
         name: "Modern",
-        image: "/catalogue/dr-modern.jpg",
+        image: "https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=800&auto=format&fit=crop",
         description: "Desain kontemporer dengan material inovatif dan minimalis.",
         components: [
           { id: "comp-dining-table-3", name: "Dining Table", description: "Meja makan utama", options: [
-            { id: "opt-table-glass-metal", name: "Glass & Metal", description: "Meja kaca frame metal minimalis", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4500000 },
-            { id: "opt-table-white-oak", name: "Light Wood", description: "Meja kayu muda dengan base metal", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
+            { id: "opt-table-glass-metal", name: "Glass & Metal", description: "Meja kaca frame metal minimalis", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4500000 },
+            { id: "opt-table-white-oak", name: "Light Wood", description: "Meja kayu muda dengan base metal", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=400&auto=format&fit=crop", pricePerMeter: 4000000 },
           ]},
           { id: "comp-dining-chairs-3", name: "Dining Chairs", description: "Kursi makan", options: [
-            { id: "opt-chair-eames-style", name: "Eames Style", description: "Kursi Eames modern minimalis", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1600000 },
-            { id: "opt-chair-plastic-metal", name: "Plastic & Metal", description: "Kursi plastik dengan kaki metal", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
+            { id: "opt-chair-eames-style", name: "Eames Style", description: "Kursi Eames modern minimalis", image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1600000 },
+            { id: "opt-chair-plastic-metal", name: "Plastic & Metal", description: "Kursi plastik dengan kaki metal", image: "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1200000 },
           ]},
           { id: "comp-hardware-3", name: "Hardware", description: "Aksesoris", options: [
-            { id: "opt-hw-chrome", name: "Chrome Finish", description: "Handle chrome polished modern", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
-            { id: "opt-hw-matte-black", name: "Matte Black", description: "Handle black matte contemporary", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
+            { id: "opt-hw-chrome", name: "Chrome Finish", description: "Handle chrome polished modern", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
+            { id: "opt-hw-matte-black", name: "Matte Black", description: "Handle black matte contemporary", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
           ]},
         ],
       },
       {
         id: "dr-rustic",
         name: "Rustic",
-        image: "/catalogue/dr-rustic.jpg",
+        image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop",
         description: "Gaya pedesaan dengan kayu natural dan aksen vintage.",
         components: [
           { id: "comp-dining-table-4", name: "Dining Table", description: "Meja makan utama", options: [
-            { id: "opt-table-farmhouse", name: "Farmhouse Style", description: "Meja kayu rustic farmhouse besar", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5000000 },
-            { id: "opt-table-reclaimed-large", name: "Reclaimed Wood", description: "Meja kayu bekas rustic vintage", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
+            { id: "opt-table-farmhouse", name: "Farmhouse Style", description: "Meja kayu rustic farmhouse besar", image: "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5000000 },
+            { id: "opt-table-reclaimed-large", name: "Reclaimed Wood", description: "Meja kayu bekas rustic vintage", image: "https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?q=80&w=400&auto=format&fit=crop", pricePerMeter: 5500000 },
           ]},
           { id: "comp-dining-chairs-4", name: "Dining Chairs", description: "Kursi makan", options: [
-            { id: "opt-chair-bentwood", name: "Bentwood Rustic", description: "Kursi bentwood warna cokelat tua", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1400000 },
-            { id: "opt-chair-woven-rush", name: "Woven Rush", description: "Kursi rush seat tradisional", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1300000 },
+            { id: "opt-chair-bentwood", name: "Bentwood Rustic", description: "Kursi bentwood warna cokelat tua", image: "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1400000 },
+            { id: "opt-chair-woven-rush", name: "Woven Rush", description: "Kursi rush seat tradisional", image: "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1300000 },
           ]},
           { id: "comp-hardware-4", name: "Hardware", description: "Aksesoris", options: [
-            { id: "opt-hw-iron", name: "Iron Hardware", description: "Hardware besi wrought rustic", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
-            { id: "opt-hw-aged", name: "Aged Brass", description: "Hardware brass aged patina", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
+            { id: "opt-hw-iron", name: "Iron Hardware", description: "Hardware besi wrought rustic", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
+            { id: "opt-hw-aged", name: "Aged Brass", description: "Hardware brass aged patina", image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=400&auto=format&fit=crop", pricePerMeter: 800000 },
           ]},
         ],
       },
       {
         id: "dr-scandinavian",
         name: "Scandinavian",
-        image: "/catalogue/dr-scandinavian.jpg",
+        image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop",
         description: "Terang, fungsional, dan cozy dengan dominasi warna putih.",
         components: [
           { id: "comp-dining-table-5", name: "Dining Table", description: "Meja makan utama", options: [
-            { id: "opt-table-birch-scandi", name: "Birch Light", description: "Meja birch putih terang Skandinavia", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3800000 },
-            { id: "opt-table-pine-white", name: "White Pine", description: "Meja pine putih natural scandi", image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
+            { id: "opt-table-birch-scandi", name: "Birch Light", description: "Meja birch putih terang Skandinavia", image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3800000 },
+            { id: "opt-table-pine-white", name: "White Pine", description: "Meja pine putih natural scandi", image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=400&auto=format&fit=crop", pricePerMeter: 3500000 },
           ]},
           { id: "comp-dining-chairs-5", name: "Dining Chairs", description: "Kursi makan", options: [
-            { id: "opt-chair-wishbone", name: "Wishbone Style", description: "Kursi wishbone natural scandi", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1300000 },
-            { id: "opt-chair-simple-wooden", name: "Simple Wooden", description: "Kursi kayu sederhana terang", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1100000 },
+            { id: "opt-chair-wishbone", name: "Wishbone Style", description: "Kursi wishbone natural scandi", image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1300000 },
+            { id: "opt-chair-simple-wooden", name: "Simple Wooden", description: "Kursi kayu sederhana terang", image: "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=400&auto=format&fit=crop", pricePerMeter: 1100000 },
           ]},
           { id: "comp-hardware-5", name: "Hardware", description: "Aksesoris", options: [
-            { id: "opt-hw-natural-wood", name: "Natural Wood", description: "Handle kayu natural scandi", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
-            { id: "opt-hw-minimal", name: "Minimal Metal", description: "Handle metal minimal simple", image: "https://images.unsplash.com/photo-1565636192335-14375bc267c5?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
+            { id: "opt-hw-natural-wood", name: "Natural Wood", description: "Handle kayu natural scandi", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=400&auto=format&fit=crop", pricePerMeter: 500000 },
+            { id: "opt-hw-minimal", name: "Minimal Metal", description: "Handle metal minimal simple", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
           ]},
         ],
       },
@@ -346,25 +537,25 @@ export const ROOM_CATEGORIES = [
         description: "Kitchen set sederhana dan rapi dengan fungsi optimal tanpa berlebihan.",
         components: [
           {
-            id: "comp-board-1",
-            name: "Board/Carcass",
-            description: "Material utama rangka kabinet",
+            id: "ks-min-structure",
+            name: "Structure (Rangka)",
+            description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board",
             options: [
-              { id: "opt-plywood", name: "Plywood 15mm", description: "Kayu lapis berkualitas, tahan lembap untuk zona basah", image: "https://id.chinakitchencabinets.net/Content/uploads/2023211506/20230321135938c3ed1319652e4bffb56a8b7667532dda.jpg", pricePerMeter: 800000 },
-              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", image: "https://static.wixstatic.com/media/3f747e_662be33eb10943bda18c3c31442b31e4~mv2.png/v1/fill/w_980,h_686,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/3f747e_662be33eb10943bda18c3c31442b31e4~mv2.png", pricePerMeter: 900000 },
-              { id: "opt-pvc", name: "PVC Board", description: "Tahan air sempurna, sangat tahan lama untuk dapur", image: "https://icdn.tradew.com/file/201706/1572031/jpg/7873338.jpg?x-oss-process=image/quality,Q_90", pricePerMeter: 1000000 },
-              { id: "opt-mdf", name: "MDF 18mm", description: "Permukaan halus, cocok untuk cat duco finishing", image: "https://static.wixstatic.com/media/3f747e_fd7ab11098c74718b183a2c45565d535~mv2.webp/v1/fill/w_568,h_398,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3f747e_fd7ab11098c74718b183a2c45565d535~mv2.webp", pricePerMeter: 850000 },
+              { id: "ks-min-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+              { id: "ks-min-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+              { id: "ks-min-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+              { id: "ks-min-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
             ],
           },
           {
-            id: "comp-hpl-1",
-            name: "HPL (Door Finish)",
-            description: "Material permukaan depan kabinet",
+            id: "ks-min-finishing",
+            name: "Finishing (Surface)",
+            description: "HPL, Duco, Veneer, Tacosheet",
             options: [
-              { id: "opt-hpl-formica", name: "Formica", description: "Brand ternama, tahan lama, banyak pilihan warna", image: "https://images.unsplash.com/photo-1574909521282-e6c96d58f370?q=80&w=400&auto=format&fit=crop", pricePerMeter: 600000 },
-              { id: "opt-hpl-laminart", name: "Laminart", description: "Kualitas premium, tekstur natural wood, ketahanan tinggi", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=400&auto=format&fit=crop", pricePerMeter: 700000 },
-              { id: "opt-hpl-aica", name: "AICA", description: "Harga terjangkau, performa standar, banyak pilihan", image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=400&auto=format&fit=crop", pricePerMeter: 450000 },
-              { id: "opt-hpl-wilson", name: "Wilson", description: "Standar industri, pilihan warna lengkap, tahan gores", image: "https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=400&auto=format&fit=crop", pricePerMeter: 550000 },
+              { id: "ks-min-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+              { id: "ks-min-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+              { id: "ks-min-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+              { id: "ks-min-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
             ],
           },
           {
@@ -386,22 +577,25 @@ export const ROOM_CATEGORIES = [
         description: "Dapur cerah dengan finishing kayu muda dan storage cerdas.",
         components: [
           {
-            id: "comp-board-2",
-            name: "Board/Carcass",
-            description: "Material utama rangka kabinet",
+            id: "ks-scn-structure",
+            name: "Structure (Rangka)",
+            description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board",
             options: [
-              { id: "opt-plywood", name: "Plywood 15mm", description: "Kayu lapis berkualitas, tahan lembap untuk zona basah", pricePerMeter: 800000 },
-              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", pricePerMeter: 900000 },
-              { id: "opt-pvc", name: "PVC Board", description: "Tahan air sempurna, sangat tahan lama untuk dapur", pricePerMeter: 1000000 },
+              { id: "ks-scn-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+              { id: "ks-scn-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+              { id: "ks-scn-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+              { id: "ks-scn-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
             ],
           },
           {
-            id: "comp-hpl-2",
-            name: "HPL (Door Finish)",
-            description: "Material permukaan depan kabinet",
+            id: "ks-scn-finishing",
+            name: "Finishing (Surface)",
+            description: "HPL, Duco, Veneer, Tacosheet",
             options: [
-              { id: "opt-hpl-formica", name: "Formica Natural Series", description: "Finishing kayu natural tone, scandinavian vibe", pricePerMeter: 650000 },
-              { id: "opt-hpl-laminart", name: "Laminart Oak", description: "Warna oak muda, modern minimalis Skandinavia", pricePerMeter: 750000 },
+              { id: "ks-scn-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+              { id: "ks-scn-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+              { id: "ks-scn-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+              { id: "ks-scn-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
             ],
           },
           {
@@ -422,21 +616,25 @@ export const ROOM_CATEGORIES = [
         description: "Perpaduan elegan gaya Jepang dan Skandinavia yang warm.",
         components: [
           {
-            id: "comp-board-3",
-            name: "Board/Carcass",
-            description: "Material utama rangka kabinet",
+            id: "ks-jpn-structure",
+            name: "Structure (Rangka)",
+            description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board",
             options: [
-              { id: "opt-plywood", name: "Plywood 15mm", description: "Kayu lapis berkualitas, tahan lembap untuk zona basah", pricePerMeter: 800000 },
-              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", pricePerMeter: 900000 },
+              { id: "ks-jpn-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+              { id: "ks-jpn-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+              { id: "ks-jpn-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+              { id: "ks-jpn-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
             ],
           },
           {
-            id: "comp-hpl-3",
-            name: "Finish",
-            description: "Material finishing permukaan",
+            id: "ks-jpn-finishing",
+            name: "Finishing (Surface)",
+            description: "HPL, Duco, Veneer, Tacosheet",
             options: [
-              { id: "opt-veneer", name: "Veneer Kayu Natural", description: "Finishing kayu solid, aesthetic Japandi warm", pricePerMeter: 800000 },
-              { id: "opt-hpl-laminart", name: "Laminart Walnut", description: "Warna kayu hangat, matching japandi style", pricePerMeter: 750000 },
+              { id: "ks-jpn-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+              { id: "ks-jpn-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+              { id: "ks-jpn-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+              { id: "ks-jpn-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
             ],
           },
           {
@@ -457,21 +655,25 @@ export const ROOM_CATEGORIES = [
         description: "Kitchen set timeless dengan detail dekoratif dan finishing berkualitas.",
         components: [
           {
-            id: "comp-board-4",
-            name: "Board/Carcass",
-            description: "Material utama rangka kabinet",
+            id: "ks-kls-structure",
+            name: "Structure (Rangka)",
+            description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board",
             options: [
-              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", pricePerMeter: 900000 },
-              { id: "opt-pvc", name: "PVC Board", description: "Tahan air sempurna, sangat tahan lama untuk dapur", pricePerMeter: 1000000 },
+              { id: "ks-kls-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+              { id: "ks-kls-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+              { id: "ks-kls-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+              { id: "ks-kls-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
             ],
           },
           {
-            id: "comp-hpl-4",
-            name: "HPL (Door Finish)",
-            description: "Material permukaan depan kabinet",
+            id: "ks-kls-finishing",
+            name: "Finishing (Surface)",
+            description: "HPL, Duco, Veneer, Tacosheet",
             options: [
-              { id: "opt-hpl-formica", name: "Formica Classic", description: "Warna putih cream klasik, timeless elegant", pricePerMeter: 650000 },
-              { id: "opt-hpl-laminart", name: "Laminart Creme", description: "Finishing cream sophisticated, detail classic ornament", pricePerMeter: 750000 },
+              { id: "ks-kls-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+              { id: "ks-kls-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+              { id: "ks-kls-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+              { id: "ks-kls-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
             ],
           },
           {
@@ -488,28 +690,29 @@ export const ROOM_CATEGORIES = [
       {
         id: "ks-modern",
         name: "Modern",
-        image: "/catalogue/ks-modern.jpg",
+        image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop",
         description: "Dapur futuristik dengan teknologi smart dan material contemporary.",
         components: [
           {
-            id: "comp-board-5",
-            name: "Board/Carcass",
-            description: "Material utama rangka kabinet",
+            id: "ks-mod-structure",
+            name: "Structure (Rangka)",
+            description: "Blockboard, Plywood 18mm, MDF 18mm, PVC Board",
             options: [
-              { id: "opt-plywood", name: "Plywood 15mm", description: "Kayu lapis berkualitas, tahan lembap untuk zona basah", pricePerMeter: 800000 },
-              { id: "opt-hmr", name: "HMR (High Moisture Resistant)", description: "Material tahan kelembaban tinggi, lebih awet", pricePerMeter: 900000 },
-              { id: "opt-pvc", name: "PVC Board", description: "Tahan air sempurna, sangat tahan lama untuk dapur", pricePerMeter: 1000000 },
-              { id: "opt-mdf", name: "MDF 18mm", description: "Permukaan halus, cocok untuk cat duco finishing", pricePerMeter: 850000 },
+              { id: "ks-mod-str-blockboard", name: "Blockboard", description: "Blockboard solid untuk konstruksi utama, stabil dan kuat", image: "", pricePerMeter: 650000 },
+              { id: "ks-mod-str-plywood", name: "Plywood 18mm", description: "Plywood 18mm furniture grade tahan lembap", image: "", pricePerMeter: 800000 },
+              { id: "ks-mod-str-mdf", name: "MDF 18mm", description: "MDF 18mm permukaan halus untuk finishing rata", image: "", pricePerMeter: 600000 },
+              { id: "ks-mod-str-pvc", name: "PVC Board", description: "PVC board tahan air dan rayap, sangat durable", image: "", pricePerMeter: 950000 },
             ],
           },
           {
-            id: "comp-hpl-5",
-            name: "HPL (Door Finish)",
-            description: "Material permukaan depan kabinet",
+            id: "ks-mod-finishing",
+            name: "Finishing (Surface)",
+            description: "HPL, Duco, Veneer, Tacosheet",
             options: [
-              { id: "opt-hpl-laminart", name: "Laminart Modern Series", description: "Warna bold minimalis, texture halus modern", pricePerMeter: 700000 },
-              { id: "opt-hpl-aica", name: "AICA Graphite", description: "Warna gelap elegan, contemporary sleek look", pricePerMeter: 500000 },
-              { id: "opt-duco", name: "Duco Paint", description: "Cat duco glossy premium, warna custom unlimited", pricePerMeter: 800000 },
+              { id: "ks-mod-fin-hpl", name: "HPL", description: "High Pressure Laminate tahan gores dan noda", image: "", pricePerMeter: 400000 },
+              { id: "ks-mod-fin-duco", name: "Duco", description: "Cat duco premium, warna custom, halus mengkilap", image: "", pricePerMeter: 650000 },
+              { id: "ks-mod-fin-veneer", name: "Veneer", description: "Veneer kayu natural dengan clear coat finishing", image: "", pricePerMeter: 750000 },
+              { id: "ks-mod-fin-taco", name: "Tacosheet", description: "Tacosheet ekonomis dengan banyak pilihan motif", image: "", pricePerMeter: 350000 },
             ],
           },
           {
@@ -579,7 +782,7 @@ export const CATALOGUE_ITEMS = [
   {
     slug: "single-modern-hpl",
     name: "Single Line Modern – HPL",
-    image: "/catalogue/single-line-modern-hpl.png",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop",
     layout: "Single",
     style: ["Modern", "Minimal"],
     carcass: { material: "Plywood", thickness_mm: 15 },

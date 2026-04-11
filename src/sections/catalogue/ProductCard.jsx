@@ -65,7 +65,7 @@ export default function ProductCard({ item, roomType = "kitchen" }) {
     e.preventDefault();
     e.stopPropagation();
     const message = `Halo, saya tertarik dengan ${name}. Bisa konsultasi lebih lanjut?`;
-    window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/6282145756660?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (

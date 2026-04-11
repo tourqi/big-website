@@ -1,6 +1,8 @@
 // src/pages/CataloguePage.jsx
 // Halaman Katalog — entry point untuk route /catalogue
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
+import { ArrowUp, SearchX, RotateCcw, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 import CatalogueHero       from "@/sections/catalogue/CatalogueHero";
 import CatalogueCategories from "@/sections/catalogue/CatalogueCategories";
@@ -89,21 +91,27 @@ export default function CataloguePage() {
 
   const handlePickStyle = (style) => setFilters((f) => ({ ...f, style }));
 
+  // Back to Top visibility
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 600);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:py-12 space-y-6">
-      {/* Hero */}
+
+      {/* ─── ZONA 1: HERO & NAVIGASI ──────────────────────── */}
       <CatalogueHero />
 
-      {/* Room Tabs Navigation - Sticky */}
-      <RoomTabs activeRoom={activeRoom} onChangeRoom={setRoom} />
-
-      {/* Kategori Katalog */}
+      {/* Kategori 4 Ruangan — navigasi visual ke sub-halaman */}
       <CatalogueCategories />
 
-      {/* Kalkulator estimasi */}
-      <PriceEstimator />
+      {/* Room Tabs Navigation - Sticky (offset for fixed navbar) */}
+      <RoomTabs activeRoom={activeRoom} onChangeRoom={setRoom} />
 
-      {/* Filter */}
+      {/* ─── ZONA 2: BROWSING (Filter → Produk) ──────────── */}
       <CatalogueFilter
         filters={filters}
         setFilters={setFilters}
@@ -125,26 +133,69 @@ export default function CataloguePage() {
         onClearAll={handleReset}
       />
 
-      {/* Callout panduan */}
-      <GuideCallout />
-
       {/* Grid produk */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {visibleItems.map((item) => (
           <ProductCard key={item.slug} item={item} />
         ))}
         {visibleItems.length === 0 && (
-          <div className="col-span-full rounded-3xl border p-8 text-center text-muted-foreground shadow-sm">
-            Tidak ada item sesuai filter. Coba longgarkan filter harga atau ganti pilihan.
+          <div className="col-span-full rounded-3xl border p-10 text-center shadow-sm space-y-4">
+            <div className="mx-auto w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+              <SearchX className="h-8 w-8 text-gray-400" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800">Tidak ada item ditemukan</h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                Coba longgarkan filter harga atau ganti pilihan untuk melihat lebih banyak produk.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button variant="outline" className="rounded-xl" onClick={handleReset}>
+                <RotateCcw className="mr-2 h-4 w-4" /> Reset Semua Filter
+              </Button>
+              <Button className="rounded-xl" asChild>
+                <a href="/#contact">
+                  <Sparkles className="mr-2 h-4 w-4" /> Konsultasi Custom
+                </a>
+              </Button>
+            </div>
           </div>
         )}
       </div>
 
-      {/* Seksi bawah */}
+      {/* ─── ZONA 3: PERTIMBANGAN & EDUKASI ───────────────── */}
+      <div className="relative">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+      </div>
+
+      {/* Callout panduan — setelah browse, sebelum decision */}
+      <GuideCallout />
+
+      {/* Kalkulator estimasi — tool untuk decision */}
+      <PriceEstimator />
+
+      {/* Perbandingan paket */}
       <PackageCompare />
+
+      {/* ─── ZONA 4: TRUST & SEO ──────────────────────────── */}
+      <div className="relative">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+      </div>
+
       <MicroEdu />
       <WhyUs />
       <SeoLinkHub />
+
+      {/* ─── FLOATING: Back to Top ────────────────────────── */}
+      {showTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-brand text-white shadow-lg hover:bg-brand/90 transition-all animate-in fade-in slide-in-from-bottom-4 duration-300"
+          aria-label="Kembali ke atas"
+        >
+          <ArrowUp className="h-5 w-5" />
+        </button>
+      )}
     </div>
   );
 }

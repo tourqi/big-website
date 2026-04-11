@@ -124,7 +124,7 @@ export default function CatalogueStylesPage() {
               >
                 <div className="flex flex-col md:flex-row">
                   {/* Image */}
-                  <div className="w-full md:w-64 h-64 md:h-auto overflow-hidden bg-zinc-100 flex-shrink-0">
+                  <div className="w-full md:w-64 aspect-square overflow-hidden bg-zinc-100 flex-shrink-0">
                     <img
                       src={style.image || PLACEHOLDER}
                       alt={style.name}
