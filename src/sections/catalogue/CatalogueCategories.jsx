@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
-import { ROOM_CATEGORIES } from "@/data/kitchenCatalogue";
+import { ROOM_CATEGORIES } from "@/data/roomCatalogue";
 import { ArrowRight } from "lucide-react";
 
 const PLACEHOLDER = "/catalogue/placeholder.jpg";

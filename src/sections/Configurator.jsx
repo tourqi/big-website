@@ -2,7 +2,7 @@
 // Update: show visible "jenis HPL" (swatch label) so users know exactly which type is selected.
 
 import React, { useMemo, useState } from "react";
-import { KITCHEN_OPTIONS } from "@/data/catalogue.js";
+import { KITCHEN_OPTIONS } from "@/data/configuratorData.js";
 import { ChevronLeft, ChevronRight, ZoomIn, Tag } from "lucide-react";
 import Modal from "@/components/Modal.jsx"; // kita pakai modal kamu untuk zoom
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Plus } from "lucide-react";
-import { ROOM_CATEGORIES } from "@/data/kitchenCatalogue";
+import { ROOM_CATEGORIES } from "@/data/roomCatalogue";
 import { KITCHEN_SET_LIST_DESIGNS } from "@/data/kitchenSetListDesigns";
 
 const DESIGN_TYPE_OPTIONS = ["List Detail", "Detail Technical", "Concept Note"];

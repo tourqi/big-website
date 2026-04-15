@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ROOM_CATEGORIES } from "@/data/kitchenCatalogue";
+import { ROOM_CATEGORIES } from "@/data/roomCatalogue";
 import { ArrowLeft, Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { calculateTotalPrice, formatIDR } from "@/lib/pricingUtils";

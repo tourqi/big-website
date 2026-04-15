@@ -5,14 +5,14 @@ export const BOARD_OPTIONS = [
   {
     key: "plywood-15",
     name: "Plywood 15 mm",
-    image: "https://miro.medium.com/v2/1*XQQ6Ujpj2RqwsPFdzFZTWg.jpeg",
+    image: "https://www.wburton.co.uk/wp-content/uploads/2023/08/marine_plywood_18mm.webp",
     summary:
       "Board plywood grade furniture 15 mm. Ringan, tahan lembap, cocok untuk kabinet atas & bawah standar.",
   },
   {
     key: "plywood-18",
     name: "Plywood 18 mm",
-    image: "https://miro.medium.com/v2/1*XQQ6Ujpj2RqwsPFdzFZTWg.jpeg",
+    image: "https://www.wburton.co.uk/wp-content/uploads/2023/08/marine_plywood_18mm.webp",
     summary:
       "Board plywood grade furniture 18 mm. Lebih tebal dan kuat — ideal untuk island, countertop support, dan kabinet berat.",
   },

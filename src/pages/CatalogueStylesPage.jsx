@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ROOM_CATEGORIES } from "@/data/kitchenCatalogue";
+import { ROOM_CATEGORIES } from "@/data/roomCatalogue";
 import { ArrowLeft, Sparkles, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";

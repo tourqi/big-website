@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { PACKAGES } from "@/data/kitchenCatalogue";
+import { PACKAGES } from "@/data/roomCatalogue";
 import { toIDR, cls } from "@/lib/format";
 
 export default function PackageCompare() {

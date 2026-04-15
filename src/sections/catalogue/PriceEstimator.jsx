@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ROOM_CATEGORIES } from "@/data/kitchenCatalogue";
+import { ROOM_CATEGORIES } from "@/data/roomCatalogue";
 import { toIDR } from "@/lib/format";
 import { ChefHat, Armchair, Bed, UtensilsCrossed, Check } from "lucide-react";
 

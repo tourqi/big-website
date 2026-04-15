@@ -45,7 +45,7 @@ export default function About() {
           <div>
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
-                src="portfolio/team.jpg"
+                src="/cat.JPG"
                 alt="Interior project"
                 className="w-full h-[420px] object-cover"
                 loading="lazy"

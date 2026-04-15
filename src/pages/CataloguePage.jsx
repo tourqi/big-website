@@ -16,7 +16,7 @@ import SeoLinkHub          from "@/sections/catalogue/SeoLinkHub";
 import GuideCallout        from "@/sections/catalogue/GuideCallout";
 import RoomTabs            from "@/sections/catalogue/RoomTabs";
 
-import { CATALOGUE_ITEMS } from "@/data/kitchenCatalogue";
+import { CATALOGUE_ITEMS } from "@/data/roomCatalogue";
 
 const DEFAULT_FILTERS    = { layout: "", style: "", finish: "", top: "" };
 const DEFAULT_PRICE      = [2500000, 7000000];

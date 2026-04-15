@@ -2,7 +2,7 @@
 import React, { useMemo } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
-import { ROOM_CATEGORIES } from "@/data/kitchenCatalogue";
+import { ROOM_CATEGORIES } from "@/data/roomCatalogue";
 
 /**
  * Breadcrumbs component - displays navigation breadcrumb trail

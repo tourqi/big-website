@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Filter, Search, X, Zap, TrendingUp, DollarSign, ChevronDown, SlidersHorizontal } from "lucide-react";
 import { ALL, toIDR, toSelectValue, fromSelectValue } from "@/lib/format";
-import { LAYOUT_OPTIONS, STYLE_OPTIONS, FINISH_OPTIONS, TOP_OPTIONS } from "@/data/kitchenCatalogue";
+import { LAYOUT_OPTIONS, STYLE_OPTIONS, FINISH_OPTIONS, TOP_OPTIONS } from "@/data/roomCatalogue";
 
 const SORT_OPTIONS = [
   "Disarankan",
