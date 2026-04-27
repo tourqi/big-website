@@ -2,12 +2,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Home, Search } from "lucide-react";
+import PageMeta from "@/lib/PageMeta.jsx";
 
 export default function NotFound() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
+      <PageMeta title="404 — Halaman Tidak Ditemukan" />
       <div className="max-w-md text-center">
         {/* 404 Header */}
         <div className="mb-8">

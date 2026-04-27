@@ -3,8 +3,8 @@ import React from "react";
 
 export default function About() {
   const stats = [
-    { value: "20+", label: "Proyek interior terselesaikan" },
-    { value: "5+", label: "Partner & vendor terpercaya" },
+    { value: "50+", label: "Proyek interior terselesaikan" },
+    { value: "10+", label: "Partner & vendor terpercaya" },
     { value: "99%", label: "Klien puas dengan hasil kami" },
   ];
 

@@ -50,7 +50,7 @@ export default function HeroSplit({
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-gray-700">
               <div className="flex items-center gap-2">
                 <span className="text-base sm:text-lg">🏗️</span>
-                <span>20+ Proyek Selesai</span>
+                <span>50+ Proyek Selesai</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-base sm:text-lg">💰</span>

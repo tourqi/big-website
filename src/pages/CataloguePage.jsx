@@ -3,6 +3,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { ArrowUp, SearchX, RotateCcw, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import PageMeta from "@/lib/PageMeta.jsx";
 
 import CatalogueHero       from "@/sections/catalogue/CatalogueHero";
 import CatalogueCategories from "@/sections/catalogue/CatalogueCategories";
@@ -101,6 +102,10 @@ export default function CataloguePage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:py-12 space-y-6">
+      <PageMeta
+        title="Katalog Kitchen Set & Furnitur"
+        description="Katalog kitchen set, wardrobe, dan furnitur custom di Bogor & Jakarta. Filter by gaya, material, dan harga. Estimasi harga instan."
+      />
 
       {/* ─── ZONA 1: HERO & NAVIGASI ──────────────────────── */}
       <CatalogueHero />

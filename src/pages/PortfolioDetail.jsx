@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { PROJECTS } from "@/data/projects.js";
 import Lightbox from "@/components/Lightbox.jsx";
 import { PLACEHOLDER_SRC, handleImageError } from "@/lib/imageHandlers";
+import PageMeta from "@/lib/PageMeta.jsx";
 
 export default function PortfolioDetail() {
   const { id } = useParams();
@@ -40,6 +41,10 @@ export default function PortfolioDetail() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <PageMeta
+        title={project.title}
+        description={project.summary}
+      />
       {/* Cover Notion-like (klik untuk lightbox) */}
       <div className="w-full">
         <div className="mx-auto max-w-6xl">

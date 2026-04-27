@@ -6,6 +6,7 @@ import { ArrowLeft, Sparkles, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { handleImageError } from "@/lib/imageHandlers";
+import PageMeta from "@/lib/PageMeta.jsx";
 
 const PLACEHOLDER = "/catalogue/placeholder.jpg";
 
@@ -33,6 +34,10 @@ export default function CatalogueStylesPage() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <PageMeta
+        title={`${category.name} — Katalog`}
+        description={`Pilihan desain ${category.name} custom di Bogor & Jakarta. Lihat koleksi gaya dan estimasi harga.`}
+      />
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-24 pb-12">
         <div className="max-w-6xl mx-auto px-4">

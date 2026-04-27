@@ -2,10 +2,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import PageMeta from "@/lib/PageMeta.jsx";
 
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      <PageMeta title="Syarat & Ketentuan" description="Syarat dan ketentuan layanan Bogor Interior Garage." />
       {/* Header */}
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">

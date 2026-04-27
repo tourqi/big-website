@@ -1,6 +1,7 @@
 // src/pages/KitchenGuidePage.jsx
 // Halaman panduan singkat kitchen set — route /kitchen-guide
 import React from "react";
+import PageMeta from "@/lib/PageMeta.jsx";
 
 const Section = ({ id, title, children }) => (
   <section id={id} className="scroll-mt-24">
@@ -43,6 +44,10 @@ const NAV_ITEMS = [
 export default function KitchenGuidePage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 scroll-smooth pt-24">
+      <PageMeta
+        title="Panduan Kitchen Set"
+        description="Panduan lengkap memilih kitchen set — layout, material, finishing, dan tips memaksimalkan dapur kecil. Dari Bogor Interior Garage."
+      />
       {/* Header */}
       <header className="flex items-start justify-between gap-4">
         <div>
